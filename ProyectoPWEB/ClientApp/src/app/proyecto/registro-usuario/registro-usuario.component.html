@@ -1,0 +1,73 @@
+<div class="container">
+    <br>
+
+    <img id="imgRegistro"
+        src="https://cdn.icon-icons.com/icons2/20/PNG/128/businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png"
+        alt="">
+
+    <br>
+    <br>
+    <br>
+
+    <div class="form-group">
+        <label for="inputState" class="form-label">Tipo de Identificación</label>
+        <select [(ngModel)]="usuario.tipoIdentificacionUsuario"  name="areaProyecto" id="inputState" class="form-select">
+          <option value="Cedula Ciudadania">Cedula Ciudadania </option>
+          <option value="Cedula Extranjera">Cedula Extranjera</option>
+          <option value="Tarjeta de Identidad">Tarjeta de Identidad </option>
+          <option value="Pasaporte">Pasaporte </option>
+        </select>
+      </div>
+
+        <div id="contenedor2TelCorreo">
+            <div class="row g-2">
+                <div class="col-sm-5">
+                    <span>Identificacion</span><br>
+                    <input id="id" type="text" class="form-control" aria-label="City" [(ngModel)]="usuario.identificacionUsuario">
+                </div>
+
+                <div class="col-sm-5">
+                    <span>Nombre</span><br>
+                    <input name="nombre" type="text" class="form-control" aria-label="State" [(ngModel)]="usuario.nombreUsuario">
+                </div>
+            </div>
+        </div>
+        <br> <br>
+
+        <div id="contenedor2TelCorreo">
+            <div class="row g-2">
+                <div class="col-sm-5">
+                    <span>Telefono</span><br>
+                    <input name="telefono" type="text" class="form-control" aria-label="City" [(ngModel)]="usuario.telefonoUsuario">
+                </div>
+
+                <div class="col-sm-5">
+                    <span>Correo Electronico</span><br>
+                    <input name="correo" type="text" class="form-control" aria-label="State" [(ngModel)]="usuario.correoUsuario">
+                </div>
+            </div>
+        </div>
+
+        <br> <br>
+
+        <div id="contenedor2TelCorreo">
+            <div class="row g-2">
+                <div class="col-sm-5">
+                    <span>Contraseña</span><br>
+                    <input name="password1" type="password" class="form-control" aria-label="City" [(ngModel)]="pass">
+                </div>
+
+                <div class="col-sm-5">
+                    <span>Confirme contraseña</span><br>
+                    <input name="password2" type="password" class="form-control" aria-label="State" [(ngModel)]="usuario.contraUsuario">
+                </div>
+            </div>
+        </div>
+
+        <br> <br>
+        <div style="text-align:center">
+            <button type="button" class="btn btn-success" (click)="registrar()">Registrarse</button>
+            <button type="button" class="btn btn-danger" style="margin-left: 5px" (click)="atras()">Atras</button>
+        </div>
+        <br><br><br>
+</div>

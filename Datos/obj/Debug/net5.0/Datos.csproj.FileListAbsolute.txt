@@ -1,0 +1,30 @@
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\bin\Debug\net5.0\Datos.deps.json
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\bin\Debug\net5.0\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\bin\Debug\net5.0\ref\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\bin\Debug\net5.0\Datos.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\bin\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\bin\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.csproj.AssemblyReference.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.AssemblyInfoInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.AssemblyInfo.cs
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.csproj.CoreCompileInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.csproj.CopyComplete
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\ref\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Datos\obj\Debug\net5.0\Datos.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\bin\Debug\net5.0\Datos.deps.json
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\bin\Debug\net5.0\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\bin\Debug\net5.0\ref\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\bin\Debug\net5.0\Datos.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\bin\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\bin\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.csproj.AssemblyReference.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.AssemblyInfoInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.AssemblyInfo.cs
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.csproj.CoreCompileInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.csproj.CopyComplete
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\ref\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.pdb

@@ -1,0 +1,67 @@
+<div>
+    <app-nav-menu></app-nav-menu>
+</div>
+
+<div class="container">
+
+    <h1>Información del proyecto</h1> <br> <br>
+    <form>
+
+
+        <div id="contenedor2TelCorreo">
+            <div class="row g-2">
+                <div class="col-sm-5">
+                    <strong>Buscar por codigo: </strong>
+                    <input name="codigo" type="text" class="form-control" aria-label="City" [(ngModel)]="codigoProyecto">
+                </div>
+
+                <div class="col-sm-5">
+                    <br>
+                    <button type="submit" class="btn btn-primary" (click)="consultar()">Consultar</button>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Identificacion Investigador Princpal: </strong> <label>{{proyecto.referenciaInvestigadorPrincipal}}</label> 
+        </div>
+        
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Nombre Investigador Princpal: </strong> <label>{{proyecto.investigadorPrincipal.nombreUsuario}}</label> 
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Identificacion Co-Investigador: </strong> <label>{{proyecto.referenciaInvestigadorSecundario}} </label>
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Nombre Co-Investigador: </strong> <label>{{proyecto.investigadorSecundario.nombreUsuario}}</label> 
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Titulo del Proyecto: </strong><label>{{proyecto.tituloProyecto}}</label>
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Grupo de Investigación: </strong><label>{{proyecto.grupoDeInvestigacion}}</label>
+        </div>
+        
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Area del Proyecto: </strong><label>{{proyecto.areaProyecto}}</label>
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Linea de Investigacion: </strong><label>{{proyecto.lineaDeInvestigacion}}</label>
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Tipo de Proyecto: </strong><label>{{proyecto.tipoProyecto}}</label>
+        </div>
+
+        <div class="form-group">
+            <strong for="exampleInputPassword1">Link del proyecto: </strong> <label>{{proyecto.linkProyecto}}</label>
+        </div>
+    </form>
+
+</div> <br> <br>

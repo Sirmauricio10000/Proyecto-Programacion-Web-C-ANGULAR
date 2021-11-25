@@ -1,0 +1,34 @@
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Logica.deps.json
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\ref\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Logica.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\bin\Debug\net5.0\Datos.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\ref\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Logica\obj\Debug\net5.0\Logica.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.deps.json
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\ref\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\ref\Logica.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.pdb

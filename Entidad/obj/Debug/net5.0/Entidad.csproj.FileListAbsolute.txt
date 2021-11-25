@@ -1,0 +1,24 @@
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\bin\Debug\net5.0\Entidad.deps.json
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\bin\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\bin\Debug\net5.0\ref\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\bin\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto Programacion Web\Entidad\obj\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.deps.json
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\ref\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.pdb
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
+D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb

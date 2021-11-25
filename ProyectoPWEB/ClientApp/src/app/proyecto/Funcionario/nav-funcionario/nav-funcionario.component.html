@@ -1,0 +1,53 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <img src="../../../assets/img/logo unicesar.png.opdownload" width="12%" alt="">
+      <div class="container">
+        <a class="navbar-brand" [routerLink]="['/app-home-funcionario']">Administrativo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+          aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">
+          <ul class="navbar-nav flex-grow">
+  
+            <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/app-home-funcionario']">Inicio</a>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Administrar</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" [routerLink]="['/app-conceder-permisos']"> Conceder Permisos de Usuario</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/']"> Consultar Peticiones</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Perfil</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" [routerLink]="['/']"> Consultar Perfil</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Proyectos</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" [routerLink]="['/app-consulta-proyecto']"> Consultar Proyectos</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/app-asignar-evaluadores']"> Asignar Evaluadores</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/']">Cerrar Sesión</a>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>

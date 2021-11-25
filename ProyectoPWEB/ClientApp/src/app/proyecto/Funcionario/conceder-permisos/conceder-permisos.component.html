@@ -1,0 +1,24 @@
+<div>
+    <app-nav-funcionario></app-nav-funcionario>
+</div>
+
+<div class="container">
+    <br>
+    <h4>MODIFICAR PERMISOS DE USUARIO</h4>
+    <br> <br>
+    <div class="form-group">
+        <label>Digite la identificacion del usuario a modificar permisos</label>
+        <input type="text" class="form-control"  name="identificacionUsuario" [(ngModel)]="identificacionUsuario">
+    </div>
+
+    <div class="form-group">
+        <label for="inputState" class="form-label">Seleccione el tipo de usuario a conceder</label>
+        <select [(ngModel)]="tipoDeUsuario" name="areaProyecto" id="inputState" class="form-select">
+            <option value="estudiante">Estudiante</option>
+            <option value="administrador">Administrativo</option>
+        </select>
+    </div>
+
+    <button type="button" class="btn btn-outline-primary" (click)="modificarPermisos()">Modificar Permisos</button>
+    <br> <br>
+</div>

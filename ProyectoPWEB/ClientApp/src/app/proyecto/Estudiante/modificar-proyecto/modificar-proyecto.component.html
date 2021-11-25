@@ -1,0 +1,78 @@
+<div>
+    <app-nav-menu></app-nav-menu>
+  </div>
+
+  <div class="container">
+
+    <h1>Modificar proyecto</h1> <br> <br>
+    <form>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Referencia del proyecto a Modificar</label>
+            <input type="text" class="form-control" name="codigo" [(ngModel)]="codigoProyecto">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Titulo del Proyecto</label>
+            <input type="text" class="form-control" name="titulo"  [(ngModel)]="tituloProyecto">
+        </div>
+
+        <div class="form-group">
+            <label for="inputState" class="form-label">Grupo de investigación</label>
+            <select [(ngModel)]="grupoDeInvestigacion" name="grupoDeInvestigacion" id="inputState" class="form-select">
+  
+              <option value="AMBIENTE, CIENCIA Y TECNOLOGÍA">AMBIENTE, CIENCIA Y TECNOLOGÍA</option>
+              <option value="BIOTECNOLOGIA E INNOVACION AGROINDUSTRIAL TROPICAL">BIOTECNOLOGIA E INNOVACION AGROINDUSTRIAL TROPICAL</option>
+              <option value="CONTROL DE CALIDAD DE LOS PROCESOS EN SALUD">CONTROL DE CALIDAD DE LOS PROCESOS EN SALUD </option>
+              <option value="EDUACIÓN Y PSICOLOGÍA">EDUACIÓN Y PSICOLOGÍA </option>
+              <option value="ESTUDIOS SANITARIOS Y AMBIENTALES - E.S.A.">ESTUDIOS SANITARIOS Y AMBIENTALES - E.S.A.</option>
+              <option value="ESTUDIOS SOCIALES EN EL DEPARTAMENTO DEL CESAR">ESTUDIOS SOCIALES EN EL DEPARTAMENTO DEL CESAR </option>
+              <option value="GESTIÓN AMBIENTAL Y TERRITORIOS SOSTENIBLES">GESTIÓN AMBIENTAL Y TERRITORIOS SOSTENIBLES</option>
+              <option value="GESTIÓN EN INVESTIGACIÓN, PRODUCCIÓN Y TRANSFORMACIÓN AGROINDUSTRIAL">GESTIÓN EN INVESTIGACIÓN, PRODUCCIÓN Y TRANSFORMACIÓN AGROINDUSTRIAL </option>
+              <option value="GRUPO DE ENERGÍAS, AMBIENTE Y BIOTECNOLOGÍA">GRUPO DE ENERGÍAS, AMBIENTE Y BIOTECNOLOGÍA </option>
+              <option value="GRUPO DE INVESTIGACIÓN ARGOS">GRUPO DE INVESTIGACIÓN ARGOS</option>
+              <option value="GRUPO DE INVESTIGACION BUTERAMA">GRUPO DE INVESTIGACION BUTERAMA </option>
+              <option value="GRUPO DE INVESTIGACION EN BIOTECNOLOGIA, INGENIERIA Y SALUD">GRUPO DE INVESTIGACION EN BIOTECNOLOGIA, INGENIERIA Y SALUD</option>
+              <option value="GRUPO DE ÓPTICA E INFORMÁTICA">GRUPO DE ÓPTICA E INFORMÁTICA </option>
+              <option value="GRUPO DE OPTIMIZACIÓN AGROINDUSTRIAL">GRUPO DE OPTIMIZACIÓN AGROINDUSTRIAL </option>
+            </select>
+          </div>
+        
+        <div class="form-group">
+            <label class="form-label" for="form2Example22">Area del Proyecto</label>
+            <select class="form-control" aria-label="Default select example" name="areaProyecto"  [(ngModel)]="areaProyecto">
+                <option value="Ciencias Agrarias">Ciencias Agrarias </option>
+                <option value="Ciencias Biologicas">Ciencias Biológicas </option>
+                <option value="Ciencias Exactas y de la Tierra">Ciencias Exactas y de la Tierra </option>
+                <option value="Ciencias Humanas">Ciencias Humanas </option>
+                <option value="Ciencias Sociales Aplicadas">Ciencias Sociales Aplicadas  </option>
+                <option value="Ciencias de la Salud">Ciencias de la Salud  </option>
+                <option value="Ingenierias">Ingenierías </option>
+                <option value="Linguistica, Letras y Artes">Lingüística, Letras y Artes </option>
+                <option value="Otros">Otros  </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Linea de Investigacion</label>
+            <input type="text" class="form-control" name="lineaDeInvestigacion"  [(ngModel)]="lineaDeInvestigacion" >
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="form2Example22">Tipo de Proyecto</label>
+            <select class="form-control" aria-label="Default select example" name="tipo"  [(ngModel)]="tipoProyecto">
+                <option value="Investigación Basica">Investigación Básica </option>
+                <option value="Investigación aplicada ">Investigación aplicada  </option>
+                <option value="Desarrollo tecnológico o Experimental">Desarrollo tecnológico o Experimental </option>
+                <option value="Otro">Otro </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Link del proyecto</label>
+            <input type="text" class="form-control" name="linkProyecto"  [(ngModel)]="linkProyecto">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="modificar()">Modificar</button>
+    </form>
+
+</div> <br> <br>

@@ -1,0 +1,61 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <img src="../../../assets/img/logo unicesar.png.opdownload" width="12%" alt="">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/app-home']">Proyectos Estudiantiles</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow">
+
+          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link text-dark" [routerLink]="['/app-home']">Inicio</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Perfil</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/app-consultar-perfil']"> Consultar Perfil</a>
+              </li>
+              <li><a class="dropdown-item" [routerLink]="['/app-modificar-perfil']"> Modificar Perfil</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Proyecto</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/app-registro-proyecto']"> Registro Proyecto</a>
+              </li>
+              <li><a class="dropdown-item" [routerLink]="['/app-consultar-proyecto-estudiante']"> Detalles Proyecto</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/app-modificar-proyecto']"> Modificar Proyecto</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/app-cancelar-inscripcion']"> Cancelar Inscripción</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Atención al Estudiante</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/app-peticiones']"> Enviar Peticiones</a>
+              </li>
+              <li><a class="dropdown-item" [routerLink]="['/app-consulta-peticiones']"> Consultar Peticiones</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link text-dark" [routerLink]="['/']">Cerrar Sesión</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

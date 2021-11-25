@@ -1,0 +1,17 @@
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px;
+  }
+  
+  .carousel-inner{
+  height: 460px;
+  }
+  
+  #ajusteTexto{
+    text-align: center;
+  }
+  
+  .fondoTexto {
+    color: #FFFFFF;
+    background-color:#1DB9C3;
+  }

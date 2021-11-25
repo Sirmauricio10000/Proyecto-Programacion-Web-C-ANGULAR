@@ -1,0 +1,62 @@
+<div>
+    <app-nav-funcionario></app-nav-funcionario>
+</div>
+
+<div class="container"> 
+<br>
+<h1 style=" text-align:justify;font-family:sans-serif;margin-left: 30%;">Asignacion de proyectos</h1>
+<br>
+<img src="https://st2.depositphotos.com/1637056/7469/v/600/depositphotos_74699711-stock-illustration-selected-employee.jpg" class="img-fluid" alt="..."
+  width="70%" style="margin-left: 10%;">
+ <br> <br> <br>
+
+    <div class="row">
+      <div class="col">
+      <input type="text" class="form-control" placeholder="ID DEL EVALUADOR 1" name="idEvaluador1" [(ngModel)]="idEvaluador1">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="ID DEL EVALUADOR 2" name="idEvaluador2" [(ngModel)]="idEvaluador2">
+        </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="CODIGO DEL PROYECTO A EVALUAR" name="codigoProyectoEvaluar"  [(ngModel)]="codigoProyectoEvaluar">
+      </div>
+    </div>
+
+    <br> <br>
+
+<div class="d-grid gap-2 col-3 mx-auto">
+<button class="btn btn-success" type="submit" (click)="registrarEvaluador()">Registar evaluador</button>
+</div>
+
+<br> <br> <br>
+
+<div class="container">
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <td>Codigo Proyecto a evaluar</td>
+        <td>Titulo del proyecto a evaluar</td>
+        <td>ID Evaluador 1</td>
+        <td>ID Evaluador 2</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proyecto of proyectos|ProyectoPipe:filtro;index as i">
+          <td>{{proyecto.codigoProyecto}} </td>
+          <td>{{proyecto.tituloProyecto}} </td>
+          <td>{{proyecto.evaluadorProyecto1.identificacionUsuario}} </td>
+          <td>{{proyecto.evaluadorProyecto2.identificacionUsuario}} </td>
+      </tr>
+  </tbody>
+  </table>
+
+</div>
+
+<div class="d-grid gap-2 col-3 mx-auto">
+  <input type="text" placeholder="Titulo del proyecto" [(ngModel)]="filtro" >
+</div>
+
+
+<br> <br>
+
+</div>

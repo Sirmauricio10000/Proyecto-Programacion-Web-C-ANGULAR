@@ -1,0 +1,58 @@
+<div>
+    <app-nav-funcionario></app-nav-funcionario>
+</div>
+
+<div class="container">
+    <br>
+    <h1 style=" text-align:justify;font-family:sans-serif;">Consulta de proyectos</h1>
+    <br>
+    <img src="https://www.gob.mx/cms/uploads/article/main_image/23162/2Criterios_de_.jpg" class="img-fluid" alt="..."
+        width="70%" style="margin-left: 10%;">
+    <div style="margin-left: 60%;" class="d-grid gap-2 d-md-block">
+    </div>
+
+    <br> <br>
+    <h2 style="margin-left: 27%;">Listado de proyectos registrado</h2>
+    <br>
+    <div class="container">
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <td> Codigo</td>
+                    <td> Investigador1</td>
+                    <td> Investigador2</td>
+                    <td> Titulo</td>
+                    <td> Area</td>
+                    <td> Linea</td>
+                    <td> Tipo</td>
+                    <td> Fecha Presentacion</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let proyecto of proyectos|ProyectoPipe:filtro;index as i">
+                    <td>{{proyecto.codigoProyecto}} </td>
+                    <td>{{proyecto.investigadorPrincipal.identificacionUsuario}} </td>
+                    <td>{{proyecto.investigadorSecundario.identificacionUsuario}} </td>
+                    <td>{{proyecto.tituloProyecto}} </td>
+                    <td>{{proyecto.areaProyecto}} </td>
+                    <td>{{proyecto.lineaDeInvestigacion}} </td>
+                    <td>{{proyecto.tipoProyecto}} </td>
+                    <td>{{proyecto.fechaPresentacion | date:'d/M/yyyy  h:mm a'}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div>
+
+        <div class="centrar">
+            <input type="text" placeholder="Titulo de Proyecto" name="filtro" [(ngModel)]="filtro" style="margin-right: 5px;">
+            <button class="btn btn-primary" type="button" (click)="limparBusqueda()">Limpiar Busqueda</button>
+        </div>
+
+    </div>
+</div>
+<br>
+<br>

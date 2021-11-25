@@ -1,0 +1,99 @@
+<div>
+    <app-nav-menu></app-nav-menu>
+</div>
+
+<div class="container">
+
+    <h1>Registro de proyecto</h1>
+    <form>
+  
+      <form class="row g-3">
+  
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">Identificacion Investigador Princpal</label>
+          <input type="text" class="form-control" [(ngModel)]="proyecto.referenciaInvestigadorPrincipal" name="identificacionPrincipal">
+        </div>
+  
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">Identificacion Co-investigador</label>
+          <input type="text" class="form-control" [(ngModel)]="proyecto.referenciaInvestigadorSecundario"  name="identificacionSecundario">
+        </div>
+  
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">Titulo del Proyecto</label>
+          <input type="text" class="form-control" [(ngModel)]="proyecto.tituloProyecto"  name="tituloProyecto">
+        </div>
+  
+      </form>
+  
+      <form class="row g-3">
+  
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Grupo de investigación</label>
+          <select [(ngModel)]="proyecto.grupoDeInvestigacion" name="grupoDeInvestigacion" id="inputState" class="form-select">
+
+            <option value="AMBIENTE, CIENCIA Y TECNOLOGÍA">AMBIENTE, CIENCIA Y TECNOLOGÍA</option>
+            <option value="BIOTECNOLOGIA E INNOVACION AGROINDUSTRIAL TROPICAL">BIOTECNOLOGIA E INNOVACION AGROINDUSTRIAL TROPICAL</option>
+            <option value="CONTROL DE CALIDAD DE LOS PROCESOS EN SALUD">CONTROL DE CALIDAD DE LOS PROCESOS EN SALUD </option>
+            <option value="EDUACIÓN Y PSICOLOGÍA">EDUACIÓN Y PSICOLOGÍA </option>
+            <option value="ESTUDIOS SANITARIOS Y AMBIENTALES - E.S.A.">ESTUDIOS SANITARIOS Y AMBIENTALES - E.S.A.</option>
+            <option value="ESTUDIOS SOCIALES EN EL DEPARTAMENTO DEL CESAR">ESTUDIOS SOCIALES EN EL DEPARTAMENTO DEL CESAR </option>
+            <option value="GESTIÓN AMBIENTAL Y TERRITORIOS SOSTENIBLES">GESTIÓN AMBIENTAL Y TERRITORIOS SOSTENIBLES</option>
+            <option value="GESTIÓN EN INVESTIGACIÓN, PRODUCCIÓN Y TRANSFORMACIÓN AGROINDUSTRIAL">GESTIÓN EN INVESTIGACIÓN, PRODUCCIÓN Y TRANSFORMACIÓN AGROINDUSTRIAL </option>
+            <option value="GRUPO DE ENERGÍAS, AMBIENTE Y BIOTECNOLOGÍA">GRUPO DE ENERGÍAS, AMBIENTE Y BIOTECNOLOGÍA </option>
+            <option value="GRUPO DE INVESTIGACIÓN ARGOS">GRUPO DE INVESTIGACIÓN ARGOS</option>
+            <option value="GRUPO DE INVESTIGACION BUTERAMA">GRUPO DE INVESTIGACION BUTERAMA </option>
+            <option value="GRUPO DE INVESTIGACION EN BIOTECNOLOGIA, INGENIERIA Y SALUD">GRUPO DE INVESTIGACION EN BIOTECNOLOGIA, INGENIERIA Y SALUD</option>
+            <option value="GRUPO DE ÓPTICA E INFORMÁTICA">GRUPO DE ÓPTICA E INFORMÁTICA </option>
+            <option value="GRUPO DE OPTIMIZACIÓN AGROINDUSTRIAL">GRUPO DE OPTIMIZACIÓN AGROINDUSTRIAL </option>
+          </select>
+        </div>
+        
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">Linea de Investigacion</label>
+          <input type="text" class="form-control" [(ngModel)]="proyecto.lineaDeInvestigacion" name="lineaDeInvestigacion" >
+        </div>
+  
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Area del Proyecto</label>
+          <select [(ngModel)]="proyecto.areaProyecto"  name="areaProyecto" id="inputState" class="form-select">
+            <option selected value="Seleccione ">Seleccione </option>
+            <option value="Ciencias Agrarias">Ciencias Agrarias </option>
+            <option value="Ciencias Biologicas">Ciencias Biológicas </option>
+            <option value="Ciencias Exactas y de la Tierra">Ciencias Exactas y de la Tierra </option>
+            <option value="Ciencias Humanas">Ciencias Humanas </option>
+            <option value="Ciencias Sociales Aplicadas">Ciencias Sociales Aplicadas </option>
+            <option value="Ciencias de la Salud">Ciencias de la Salud </option>
+            <option value="Ingenierias">Ingenierías </option>
+            <option value="Linguistica, Letras y Artes">Lingüística, Letras y Artes </option>
+            <option value="Otros">Otros </option>
+  
+          </select>
+        </div>
+      </form>
+  
+      <form class="row g-3">
+  
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">Link del proyecto</label>
+          <input type="text" class="form-control" [(ngModel)]="proyecto.linkProyecto" name="linkProyecto">
+        </div>
+  
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Tipo de Proyecto</label>
+          <select id="inputState" class="form-select"  [(ngModel)]="proyecto.tipoProyecto" name="tipoProyecto">
+            <option selected value="Seleccione ">Seleccione </option>
+            <option value="Investigación Basica">Investigación Básica </option>
+            <option value="Investigación aplicada ">Investigación aplicada </option>
+            <option value="Desarrollo tecnológico o Experimental">Desarrollo tecnológico o Experimental </option>
+            <option value="Otro">Otro </option>
+          </select>
+        </div>
+  
+      </form>
+  
+      <br> <br>
+      <button type="submit" class="btn btn-primary" (click)="registrar()">Registrar</button>
+    </form>
+  
+  </div>
