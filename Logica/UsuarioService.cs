@@ -68,9 +68,11 @@ namespace Logica
         public Usuario ValidarLogin(string userName, string password) 
         {
             var usuario = _context.Usuarios.Find(userName);
-            if (usuario.password.Equals(password)){
-                usuario.persona = _context.Personas.Find(usuario.userName);
-                return usuario;
+            if (usuario!= null){
+                if(usuario.password.Equals(password)){
+                    usuario.persona = _context.Personas.Find(usuario.userName);
+                    return usuario;
+                }
             }
             return null;
         }
