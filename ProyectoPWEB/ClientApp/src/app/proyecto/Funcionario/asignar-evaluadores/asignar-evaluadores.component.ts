@@ -30,8 +30,8 @@ export class AsignarEvaluadoresComponent implements OnInit {
       {
         key.referenciaEvaluadorProyecto1 = this.idEvaluador1;
         key.referenciaEvaluadorProyecto2 = this.idEvaluador2;
-        key.referenciaInvestigadorPrincipal = key.investigadorPrincipal.identificacionUsuario;
-        key.referenciaInvestigadorSecundario = key.investigadorSecundario.identificacionUsuario;
+        key.referenciaInvestigadorPrincipal = key.investigadorPrincipal.userName;
+        key.referenciaInvestigadorSecundario = key.investigadorSecundario.userName;
         this.proyecto = new Proyecto;
         this.proyecto = key;
       }

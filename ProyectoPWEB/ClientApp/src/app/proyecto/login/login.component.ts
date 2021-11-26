@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { AuthenticationService } from 'src/app/services/AuthenticationService';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from '../models/usuario';
 
@@ -10,19 +13,27 @@ import { Usuario } from '../models/usuario';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private authenticationService: AuthenticationService, private modalService: NgbModal,
+     private router: Router) { }
 
-  usuario: string;
-  contra: string;
-  usuarios: Usuario[];
-  abrirHomeEstudiante: boolean = false;
-  abrirHomeFuncionario: boolean = false;
+  userName: string;
+  password: string;
   cerrarLogin: boolean = true;
-  existe: boolean = false;
 
   ngOnInit() {
+    this.authenticationService.logout();
   }
 
   ingresar(){
+    const messageBox = this.modalService.open(AlertModalComponent)
+    messageBox.componentInstance.title = "MENSAJE";
+    messageBox.componentInstance.message = "Usuario o contraseña invalidos";
+    this.authenticationService.login(this.userName, this.password).subscribe(p => {
+      if (p != null) {
+        messageBox.componentInstance.message = 'Bienvenido ' + p.persona.nombre;
+        if (p.userType == "estudiante")this.router.navigate(['/app-home']);
+        else this.router.navigate(['/app-home-funcionario']);
+      }
+    });
   }
 }

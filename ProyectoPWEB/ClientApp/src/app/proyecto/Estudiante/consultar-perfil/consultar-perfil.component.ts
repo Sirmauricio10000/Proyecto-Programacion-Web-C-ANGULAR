@@ -28,11 +28,11 @@ export class ConsultarPerfilComponent implements OnInit {
     })
 
     this.usuarios.forEach(key => {
-      if(key.identificacionUsuario==this.id)
+      if(key.userName==this.id)
       {
-        this.nombre = key.nombreUsuario;
-        this.correo = key.correoUsuario;
-        this.telefono = key.telefonoUsuario;
+        this.nombre = key.userName;
+        this.correo = key.persona.correo;
+        this.telefono = key.persona.telefono;
       }
     });
   }

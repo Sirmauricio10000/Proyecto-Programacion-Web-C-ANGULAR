@@ -26,9 +26,9 @@ export class ConcederPermisosComponent implements OnInit {
       this.usuarios = result;
     })
       this.usuarios.forEach(key => {
-        if(key.identificacionUsuario==this.identificacionUsuario)
+        if(key.userName==this.identificacionUsuario)
         {
-          key.tipoDeUsuario = this.tipoDeUsuario;
+          key.userType = this.tipoDeUsuario;
           this.usuario = new Usuario;
           this.usuario = key;
         }

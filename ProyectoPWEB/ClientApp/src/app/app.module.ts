@@ -27,6 +27,7 @@ import { AsignarEvaluadoresComponent } from './proyecto/Funcionario/asignar-eval
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConcederPermisosComponent } from './proyecto/Funcionario/conceder-permisos/conceder-permisos.component';
+import { JwtInterceptor } from './services/jwtInterceptor';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,7 @@ import { ConcederPermisosComponent } from './proyecto/Funcionario/conceder-permi
     ]),
   ],
   entryComponents:[AlertModalComponent],
-  providers: [ProyectoService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

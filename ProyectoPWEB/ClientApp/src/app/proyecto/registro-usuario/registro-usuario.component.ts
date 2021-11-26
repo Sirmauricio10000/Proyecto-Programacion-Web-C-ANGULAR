@@ -29,8 +29,8 @@ export class RegistroUsuarioComponent implements OnInit {
 
   registrar(){
 
-    if (this.usuario.contraUsuario ==this.pass){
-      this.usuario.tipoDeUsuario="estudiante";
+    if (this.usuario.password == this.pass){
+      this.usuario.userType="estudiante";
       this.usuarioService.post(this.usuario).subscribe(p => {
         if (p != null) {
         const messageBox = this.modalService.open(AlertModalComponent)

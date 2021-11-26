@@ -28,7 +28,7 @@ export class ModificarProyectoComponent implements OnInit {
   }
 
   modificar(){
-    this.proyectoService.get().subscribe(result => {this.proyectos = result;});
+   /* this.proyectoService.get().subscribe(result => {this.proyectos = result;});
 
     this.proyectos.forEach(key => {
       if(key.codigoProyecto==this.codigoProyecto)
@@ -58,6 +58,6 @@ export class ModificarProyectoComponent implements OnInit {
       messageBox.componentInstance.message = 'Proyecto modificado correctamente';
       this.proyecto = p;
       }
-    });
+    }); */
   }
 }
