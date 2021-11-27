@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { Persona } from '../models/persona';
 import { Usuario } from '../models/usuario';
 
 @Component({
@@ -17,10 +18,11 @@ export class RegistroUsuarioComponent implements OnInit {
   constructor(private router: Router, private usuarioService: UsuarioService, private modalService: NgbModal) { }
 
   usuario: Usuario;
-  pass: string;
+  persona: Persona;
 
   ngOnInit() {
     this.usuario = new Usuario;
+    this.persona = new Persona;
   }
 
   atras(){
@@ -29,20 +31,17 @@ export class RegistroUsuarioComponent implements OnInit {
 
   registrar(){
 
-    if (this.usuario.password == this.pass){
-      this.usuario.userType="estudiante";
-      this.usuarioService.post(this.usuario).subscribe(p => {
-        if (p != null) {
-        const messageBox = this.modalService.open(AlertModalComponent)
-        messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.message = 'Usuario registrado correctamente';
-        this.usuario = p;
-        }
-      });
-    } else{
+    this.usuario.userType="estudiante";
+    this.persona.identificacion=this.usuario.userName;
+    this.usuario.persona = this.persona;
+
+    this.usuarioService.post(this.usuario).subscribe(p => {
+      if (p != null) {
       const messageBox = this.modalService.open(AlertModalComponent)
       messageBox.componentInstance.title = "Resultado Operación";
-      messageBox.componentInstance.message = 'Error: Las contraseñas no coinciden';
-    }
+      messageBox.componentInstance.message = 'El usuario ' + this.usuario.userName + ' ha sido registrado correctamente';
+      this.usuario = p;
+      }
+    });
   }
 }

@@ -13,30 +13,34 @@
 
   <form>
     <div class="form-group">
-      <label for="exampleInputPassword1">Ingrese Identificacion</label>
-      <input type="text" class="form-control" name="id" >
+        <strong for="exampleInputPassword1">Usuario:  </strong> <label>{{usuario.userName}}</label> 
+    </div>
+    
+    <div class="form-group">
+        <strong for="exampleInputPassword1">Tipo de Usuario:  </strong> <label>{{usuario.userType}}</label> 
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPassword1">Nombre del estudiante</label>
-      <input type="text" class="form-control" name="nombre"  disabled>
+        <strong for="exampleInputPassword1">Tipo de Identificacion:  </strong> <label>{{usuario.persona.tipoIdentificacion}} </label>
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPassword1">Correo Electronico</label>
-      <input type="text" class="form-control" name="correo"  disabled>
+        <strong for="exampleInputPassword1">Identificacion:  </strong> <label>{{usuario.persona.identificacion}}</label> 
     </div>
 
-    <div>
-      <label for="exampleInputPassword1">Telefono</label>
-      <input type="text" class="form-control" name="telefono"  disabled>
+    <div class="form-group">
+        <strong for="exampleInputPassword1">Nombre:  </strong><label>{{usuario.persona.nombre}}</label>
+    </div>
+
+    <div class="form-group">
+        <strong for="exampleInputPassword1">Correo:  </strong><label>{{usuario.persona.correo}}</label>
+    </div>
+    
+    <div class="form-group">
+        <strong for="exampleInputPassword1">Telefono: </strong><label>{{usuario.persona.telefono}}</label>
     </div>
 
   </form>
-
-  <br><br>
-  <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" name="ingresar"
-    (click)="consultar()">Consultar</button>
 
   <br> <br> <br> <br>
 

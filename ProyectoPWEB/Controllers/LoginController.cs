@@ -3,6 +3,7 @@ using Datos;
 using Entidad;
 using Logica;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using ProyectoPWEB.Models;
@@ -40,9 +41,15 @@ namespace ProyectoPWEB.Controllers
         [HttpPost]
         public IActionResult Login([FromBody]LoginInputModel model)
         {
-            var user = usuarioService.ValidarLogin(model.userName, model.password);
-            if (user == null) return BadRequest("Username or password is incorrect");
-            var response = jwtService.GenerateToken(user);
+            var usuario = usuarioService.ValidarLogin(model.userName, model.password);
+            if (usuario == null) {
+                ModelState.AddModelError("Error al ingresar", "Usuario o Contraseña incorrectos");
+                var problemDetails = new ValidationProblemDetails(ModelState){ 
+                    Status = StatusCodes.Status400BadRequest
+                };
+                return BadRequest(problemDetails);
+            }
+            var response = jwtService.GenerateToken(usuario);
             return Ok(response);
         }
     }

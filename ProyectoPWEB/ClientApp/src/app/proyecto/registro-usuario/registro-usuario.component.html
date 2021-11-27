@@ -11,7 +11,7 @@
 
     <div class="form-group">
         <label for="inputState" class="form-label">Tipo de Identificación</label>
-        <select [(ngModel)]="usuario.tipoIdentificacionUsuario"  name="areaProyecto" id="inputState" class="form-select">
+        <select [(ngModel)]="persona.tipoIdentificacion"  name="tipoId" id="inputState" class="form-select">
           <option value="Cedula Ciudadania">Cedula Ciudadania </option>
           <option value="Cedula Extranjera">Cedula Extranjera</option>
           <option value="Tarjeta de Identidad">Tarjeta de Identidad </option>
@@ -23,12 +23,12 @@
             <div class="row g-2">
                 <div class="col-sm-5">
                     <span>Identificacion</span><br>
-                    <input id="id" type="text" class="form-control" aria-label="City" [(ngModel)]="usuario.identificacionUsuario">
+                    <input id="id" type="text" class="form-control" aria-label="City" name="id" [(ngModel)]="usuario.userName">
                 </div>
 
                 <div class="col-sm-5">
                     <span>Nombre</span><br>
-                    <input name="nombre" type="text" class="form-control" aria-label="State" [(ngModel)]="usuario.nombreUsuario">
+                    <input name="nombre" type="text" class="form-control" aria-label="State" [(ngModel)]="persona.nombre">
                 </div>
             </div>
         </div>
@@ -38,12 +38,12 @@
             <div class="row g-2">
                 <div class="col-sm-5">
                     <span>Telefono</span><br>
-                    <input name="telefono" type="text" class="form-control" aria-label="City" [(ngModel)]="usuario.telefonoUsuario">
+                    <input name="telefono" type="text" class="form-control" aria-label="City" [(ngModel)]="persona.telefono">
                 </div>
 
                 <div class="col-sm-5">
                     <span>Correo Electronico</span><br>
-                    <input name="correo" type="text" class="form-control" aria-label="State" [(ngModel)]="usuario.correoUsuario">
+                    <input name="correo" type="text" class="form-control" aria-label="State" [(ngModel)]="persona.correo">
                 </div>
             </div>
         </div>
@@ -54,12 +54,12 @@
             <div class="row g-2">
                 <div class="col-sm-5">
                     <span>Contraseña</span><br>
-                    <input name="password1" type="password" class="form-control" aria-label="City" [(ngModel)]="pass">
+                    <input name="password1" type="password" class="form-control" aria-label="City" [(ngModel)]="usuario.validatePass">
                 </div>
 
                 <div class="col-sm-5">
                     <span>Confirme contraseña</span><br>
-                    <input name="password2" type="password" class="form-control" aria-label="State" [(ngModel)]="usuario.contraUsuario">
+                    <input name="password2" type="password" class="form-control" aria-label="State" [(ngModel)]="usuario.password">
                 </div>
             </div>
         </div>

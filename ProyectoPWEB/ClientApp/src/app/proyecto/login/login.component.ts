@@ -18,18 +18,16 @@ export class LoginComponent implements OnInit {
 
   userName: string;
   password: string;
-  cerrarLogin: boolean = true;
 
   ngOnInit() {
     this.authenticationService.logout();
   }
 
   ingresar(){
-    const messageBox = this.modalService.open(AlertModalComponent)
-    messageBox.componentInstance.title = "MENSAJE";
-    messageBox.componentInstance.message = "Usuario o contraseña invalidos";
     this.authenticationService.login(this.userName, this.password).subscribe(p => {
       if (p != null) {
+        const messageBox = this.modalService.open(AlertModalComponent)
+        messageBox.componentInstance.title = "Inicio de sesión exitoso";
         messageBox.componentInstance.message = 'Bienvenido ' + p.persona.nombre;
         if (p.userType == "estudiante")this.router.navigate(['/app-home']);
         else this.router.navigate(['/app-home-funcionario']);

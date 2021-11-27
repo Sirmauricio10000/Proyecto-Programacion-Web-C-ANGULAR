@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from '../../models/usuario';
 
@@ -9,32 +11,12 @@ import { Usuario } from '../../models/usuario';
 })
 export class ConsultarPerfilComponent implements OnInit {
 
+  usuario: Usuario;
 
-  usuarios: Usuario[];
-  id: string;
-  nombre: string;
-  correo: string;
-  telefono: string;
-  claveAcceso: string;
-
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private usuarioService: UsuarioService, private modalService: NgbModal) { }
 
   ngOnInit() {
+    this.usuario = new Usuario;
+    //this.usuarioService.getOne(this.usuario).subscribe(p => {this.usuario = p;});
   }
-
-  consultar(){
-    this.usuarioService.get().subscribe(result => {
-      this.usuarios = result;
-    })
-
-    this.usuarios.forEach(key => {
-      if(key.userName==this.id)
-      {
-        this.nombre = key.userName;
-        this.correo = key.persona.correo;
-        this.telefono = key.persona.telefono;
-      }
-    });
-  }
-
 }

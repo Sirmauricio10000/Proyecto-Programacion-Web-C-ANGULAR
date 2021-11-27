@@ -30,7 +30,7 @@ namespace ProyectoPWEB.Controllers
         public ActionResult<Usuario> Guardar(UsuarioInputModel usuarioInput)
         {
             var usuario = MapearUsuario(usuarioInput);
-            var respuesta = usuarioService.Guardar(usuario);
+            var respuesta = usuarioService.Guardar(usuario, usuarioInput.validatePass);
             if (respuesta.Error)
             {
                 ModelState.AddModelError("Guardar Persona", respuesta.Mensaje);
@@ -73,8 +73,21 @@ namespace ProyectoPWEB.Controllers
             return usuarios;
         }
 
+        [HttpGet]
+        public ActionResult<Usuario> Get(string userName)
+        {
+            var usuario =  usuarioService.ConsultarOne(userName);
+            if (usuario != null){
+                return usuario;
+            }
+            ModelState.AddModelError("Buscar usuario", "El usuario no existe");
+            var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+            return BadRequest(problemDetails);
+        }
+
         [HttpPut]
-        public ActionResult<string> Put(UsuarioUpdateModel usuarioUpdate)
+        public ActionResult<Usuario> Put(UsuarioUpdateModel usuarioUpdate)
         {
             Usuario usuario = MapearUsuarioUpdate(usuarioUpdate);
             var response = usuarioService.Actualizar(usuario);

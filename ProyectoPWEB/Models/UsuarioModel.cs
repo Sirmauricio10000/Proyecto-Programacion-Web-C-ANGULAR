@@ -11,6 +11,7 @@ namespace ProyectoPWEB.Models
         public string userName {get;set;}
         public string userType{get; set;}
         public string password{get; set;}
+        public string validatePass{get; set;}
         public Persona persona {get;set;}
     }
 

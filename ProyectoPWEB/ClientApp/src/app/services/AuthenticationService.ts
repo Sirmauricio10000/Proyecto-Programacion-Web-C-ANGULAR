@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Usuario } from '../proyecto/models/usuario';
 @Injectable({
   providedIn: 'root'
@@ -33,7 +33,7 @@ export class AuthenticationService {
          localStorage.setItem('currentUser', JSON.stringify(user));
          this.currentUserSubject.next(user);
          return user;
-         }));
+         }), catchError(this.handleErrorService.handleError<Usuario>('Inicio de sesion', null)));
     } 
 
     logout() {

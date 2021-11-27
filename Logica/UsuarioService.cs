@@ -16,13 +16,16 @@ namespace Logica
             _context = context;
         }
     
-        public GuardarUsuarioResponse Guardar(Usuario usuario)
+        public GuardarUsuarioResponse Guardar(Usuario usuario, string validatePass)
         {
             try
             {
+                if (usuario.password != validatePass){
+                    return new GuardarUsuarioResponse("Error, las contraseñas no coinciden");
+                }
                 var usuarioBuscado = _context.Usuarios.Find(usuario.userName);
                 if(usuarioBuscado!=null){
-                    return new GuardarUsuarioResponse("Error el usuario ya se encuentra registrado");
+                    return new GuardarUsuarioResponse("Error, el usuario ya se encuentra registrado");
                 }
                 _context.Usuarios.Add(usuario);
                 _context.SaveChanges();
@@ -75,6 +78,12 @@ namespace Logica
                 }
             }
             return null;
+        }
+
+        public Usuario ConsultarOne(string userName){
+            var usuario = _context.Usuarios.Find(userName);
+            usuario.persona = _context.Personas.Find(userName);
+            return usuario;
         }
 
 
