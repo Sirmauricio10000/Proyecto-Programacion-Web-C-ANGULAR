@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -30,7 +31,6 @@ import { ConcederPermisosComponent } from './proyecto/Funcionario/conceder-permi
 import { JwtInterceptor } from './services/jwtInterceptor';
 import { AuthGuard } from './services/authGuard';
 import { ConsultarPerfilFuncionarioComponent } from './proyecto/Funcionario/consultar-perfil-funcionario/consultar-perfil-funcionario.component';
-
 
 @NgModule({
   declarations: [
@@ -63,6 +63,7 @@ import { ConsultarPerfilFuncionarioComponent } from './proyecto/Funcionario/cons
     HttpClientModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: 'app-home', component: HomeComponent, canActivate: [AuthGuard]},
       { path: 'app-registro-proyecto', component: RegistroProyectoComponent, canActivate: [AuthGuard]},
