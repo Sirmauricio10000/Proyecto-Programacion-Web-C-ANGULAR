@@ -2,59 +2,26 @@
     <app-nav-menu></app-nav-menu>
 </div>
 
-
 <div class="container">
 
-    <H1>Modificar Perfil Del Estudiante</H1>
+    <h1>Modificar datos del Estudiante</h1> <br> <br>
+    <form>
 
-    <br> <br>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nombre</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="usuarioNuevo.nombre">
+        </div>
 
-    <h3 style="text-align: center ;">Modificar Correo</h3> <br> <br>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Correo</label>
+            <input type="text" class="form-control" name="correo" [(ngModel)]="usuarioNuevo.correo">
+        </div>
 
-    <div class="input-group mb-2">
-        <span class="input-group-text" id="basic-addon1">Nuevo Correo</span>
-        <input [(ngModel)]="correo" name="correo" type="text" class="form-control" aria-label="Username"
-            aria-describedby="basic-addon1">
-        <button type="button" class="btn btn-warning btn-sm">Registrar Correo</button>
-    </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Telefono</label>
+            <input type="text" class="form-control" name="telefono" [(ngModel)]="usuarioNuevo.telefono">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="modificar()">Modificar</button>
+    </form>
 
-    <br> <br> 
-
-    <h3 style="text-align: center ;">Modificar Telefono</h3> <br> <br>
-    <div class="input-group mb-2">
-        <span class="input-group-text" id="basic-addon1">Nuevo Telefono</span>
-        <input [(ngModel)]="telefono" name="telefono" type="text" class="form-control" aria-label="Username"
-            aria-describedby="basic-addon1">
-        <button (click)=" validarNuevaClave()" type="button" class="btn btn-warning btn-sm">Registrar Telefono</button>
-    </div>
-
-
-
-    <br> <br> 
-    <h3 style="text-align: center">Modificar clave de acceso</h3>
-
-    <br> <br>
-    <div class="input-group mb-2">
-        <span class="input-group-text" id="basic-addon1">Nueva clave</span>
-        <input [(ngModel)]="claveNew" name="claveNew" type="text" class="form-control" aria-label="Username"
-            aria-describedby="basic-addon1">
-    </div>
-
-    <br>
-    <div class="input-group mb-2">
-        <span class="input-group-text" id="basic-addon2">Confirme clave</span>
-        <input [(ngModel)]="claveValidar" name="claveValidar" type="text" class="form-control" aria-label="Username"
-            aria-describedby="basic-addon2">
-    </div>
-
-    <br>
-    <div style="text-align: center;">
-        <button (click)=" validarNuevaClave()" type="button" class="btn btn-warning btn-sm">Registrar Nueva Clave</button>
-    </div>
-
-
-
-
-    <br> <br> <br> <br>
-
-</div>
+</div> <br> <br>

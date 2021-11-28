@@ -1,3 +1,5 @@
+using System.Net.Http.Headers;
+using System.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,8 +61,6 @@ namespace ProyectoPWEB.Controllers
             var usuario =
                 new Usuario {
                     userName = usuarioUpdate.userName,
-                    userType = usuarioUpdate.userType,
-                    password = usuarioUpdate.password,
                     persona = usuarioUpdate.persona,
                 };
             return usuario;
@@ -73,18 +73,20 @@ namespace ProyectoPWEB.Controllers
             return usuarios;
         }
 
-        [HttpGet]
-        public ActionResult<Usuario> Get(string userName)
+        [HttpGet("{userName}")]
+        public ActionResult<UsuarioViewModel> Get(string userName)
         {
-            var usuario =  usuarioService.ConsultarOne(userName);
-            if (usuario != null){
-                return usuario;
+            var response =  usuarioService.ConsultarOne(userName);
+            if (!response.Error){
+                var usuario = new UsuarioViewModel(response.Usuario);
+                return Ok(usuario);
             }
-            ModelState.AddModelError("Buscar usuario", "El usuario no existe");
+            ModelState.AddModelError("Buscar usuario", response.Mensaje);
             var problemDetails = new ValidationProblemDetails(ModelState)
                     { Status = StatusCodes.Status400BadRequest };
-            return BadRequest(problemDetails);
+            return BadRequest(response.Mensaje);
         }
+        
 
         [HttpPut]
         public ActionResult<Usuario> Put(UsuarioUpdateModel usuarioUpdate)
@@ -93,7 +95,10 @@ namespace ProyectoPWEB.Controllers
             var response = usuarioService.Actualizar(usuario);
             if (response.Error)
             {
-                return BadRequest(response.Mensaje);
+                ModelState.AddModelError("Modificar usuario", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+                 return BadRequest(response.Mensaje);
             }
             return Ok(response.Usuario);
         }

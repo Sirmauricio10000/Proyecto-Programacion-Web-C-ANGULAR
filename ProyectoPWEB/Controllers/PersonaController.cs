@@ -76,13 +76,16 @@ namespace ProyectoPWEB.Controllers
         }
 
         [HttpPut]
-        public ActionResult<string> Put(PersonaUpdateModel personaUpdate)
+        public ActionResult<Persona> Put(PersonaUpdateModel personaUpdate)
         {
             Persona persona = MapearPersonaUpdate(personaUpdate);
             var response = personaService.Actualizar(persona);
             if (response.Error)
             {
-                return BadRequest(response.Mensaje);
+                ModelState.AddModelError("Modificar persona", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+                 return BadRequest(response.Mensaje);
             }
             return Ok(response.Persona);
         }

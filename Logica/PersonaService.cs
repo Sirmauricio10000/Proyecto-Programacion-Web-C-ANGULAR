@@ -46,11 +46,9 @@ namespace Logica
             {
                 var personaVieja = _context.Personas.Find(personaNueva.identificacion);
                 if (personaVieja!=null){
-                    personaVieja.identificacion = personaNueva.identificacion;
                     personaVieja.nombre = personaNueva.nombre;
-                    personaVieja.tipoIdentificacion = personaNueva.tipoIdentificacion;
-                    personaVieja.telefono = personaNueva.telefono;
                     personaVieja.correo = personaNueva.correo;
+                    personaVieja.telefono = personaNueva.telefono;
                     _context.Personas.Update(personaVieja);
                     _context.SaveChanges();
                     return new GuardarPersonaResponse(personaVieja);

@@ -29,6 +29,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConcederPermisosComponent } from './proyecto/Funcionario/conceder-permisos/conceder-permisos.component';
 import { JwtInterceptor } from './services/jwtInterceptor';
 import { AuthGuard } from './services/authGuard';
+import { ConsultarPerfilFuncionarioComponent } from './proyecto/Funcionario/consultar-perfil-funcionario/consultar-perfil-funcionario.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { AuthGuard } from './services/authGuard';
     AsignarEvaluadoresComponent,
     AlertModalComponent,
     ConcederPermisosComponent,
+    ConsultarPerfilFuncionarioComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -78,6 +80,7 @@ import { AuthGuard } from './services/authGuard';
       { path: 'app-nav-funcionario', component: NavFuncionarioComponent, canActivate: [AuthGuard]},
       { path: 'app-asignar-evaluadores', component: AsignarEvaluadoresComponent, canActivate: [AuthGuard]},
       { path: 'app-conceder-permisos', component: ConcederPermisosComponent, canActivate: [AuthGuard]},
+      { path: 'app-consultar-perfil-funcionario', component: ConsultarPerfilFuncionarioComponent, canActivate: [AuthGuard]},
       { path: '', component: LoginComponent, pathMatch: 'full' },
     ]),
   ],

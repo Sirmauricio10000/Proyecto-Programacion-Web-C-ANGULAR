@@ -1,0 +1,47 @@
+<div>
+    <app-nav-funcionario></app-nav-funcionario>
+  </div>
+  
+  
+  <div class="container" style="text-align: center;">
+    <h1>Perfil del administrador</h1>
+    <br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcCR9Qg_yFyOD4CA6ITWOGJM02y9JqwwLLA&usqp=CAU" alt="">
+    <br> <br> <br>
+  
+  
+    <form>
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Usuario:  </strong> <label>{{usuario.userName}}</label> 
+      </div>
+      
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Tipo de Usuario:  </strong> <label>{{usuario.userType}}</label> 
+      </div>
+  
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Tipo de Identificacion:  </strong> <label>{{usuario.persona.tipoIdentificacion}} </label>
+      </div>
+  
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Identificacion:  </strong> <label>{{usuario.persona.identificacion}}</label> 
+      </div>
+  
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Nombre:  </strong><label>{{usuario.persona.nombre}}</label>
+      </div>
+  
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Correo:  </strong><label>{{usuario.persona.correo}}</label>
+      </div>
+      
+      <div class="form-group">
+          <strong for="exampleInputPassword1">Telefono: </strong><label>{{usuario.persona.telefono}}</label>
+      </div>
+  
+    </form>
+  
+    <br> <br> <br> <br>
+  
+  
+  </div>

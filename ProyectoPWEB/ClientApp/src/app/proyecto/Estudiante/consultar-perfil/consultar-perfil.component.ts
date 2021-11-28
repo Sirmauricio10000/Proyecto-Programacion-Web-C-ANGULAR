@@ -13,10 +13,10 @@ export class ConsultarPerfilComponent implements OnInit {
 
   usuario: Usuario;
 
-  constructor(private usuarioService: UsuarioService, private modalService: NgbModal) { }
+  constructor() { }
 
   ngOnInit() {
     this.usuario = new Usuario;
-    //this.usuarioService.getOne(this.usuario).subscribe(p => {this.usuario = p;});
+    this.usuario = JSON.parse(localStorage.getItem("currentUser"));
   }
 }

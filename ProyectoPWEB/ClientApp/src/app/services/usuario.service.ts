@@ -25,12 +25,12 @@ export class UsuarioService {
       );
   }
 
-  /*getOne(userName: string) : Observable<Usuario> {
-    return this.http.get<Usuario>(this.baseUrl + 'api/Usuario', userName)
+  getOne(userName: string) : Observable<Usuario> {
+    return this.http.get<Usuario>(this.baseUrl + 'api/Usuario'+userName)
       .pipe(tap(),
         catchError(this.handleErrorService.handleError<Usuario>('Consulta Usuario', null))
       );
-  } */
+  }
 
   post(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.baseUrl + 'api/Usuario', usuario)

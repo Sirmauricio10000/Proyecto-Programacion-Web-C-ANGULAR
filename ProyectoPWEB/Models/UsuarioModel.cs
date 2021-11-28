@@ -15,9 +15,10 @@ namespace ProyectoPWEB.Models
         public Persona persona {get;set;}
     }
 
-    public class UsuarioViewModel:UsuarioInputModel{
-
-        public string token {get;set;}
+    public class UsuarioViewModel{
+        public string userName {get;set;}
+        public string userType {get;set;}
+        public Persona persona{get;set;}
 
         public UsuarioViewModel(Usuario usuario)
         {

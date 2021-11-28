@@ -12,12 +12,12 @@ public class JwtService
     private readonly AppSetting _appSettings;
     public JwtService(IOptions<AppSetting> appSettings) => _appSettings = appSettings.Value;
 
-    public UsuarioViewModel GenerateToken(Usuario userLogIn)
+    public LoginViewModel GenerateToken(Usuario userLogIn)
     {
         // return null if user not found
         if (userLogIn == null) return null;
 
-        var userResponse = new UsuarioViewModel() {   
+        var userResponse = new LoginViewModel() {   
             userName = userLogIn.userName,
             userType = userLogIn.userType,
             persona = userLogIn.persona

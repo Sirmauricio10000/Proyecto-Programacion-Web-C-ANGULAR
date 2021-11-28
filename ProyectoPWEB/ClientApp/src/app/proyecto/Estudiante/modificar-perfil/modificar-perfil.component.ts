@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { PersonaService } from 'src/app/services/persona.service';
+import { Persona } from '../../models/persona';
+import { Usuario } from '../../models/usuario';
 
 
 @Component({
@@ -8,29 +13,29 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ModificarPerfilComponent implements OnInit {
- nombre: string ='Jefferson Palacio';
- identificaccion : string='1003242180';
- correo : string='davidpalacio1506@outlook.com';
- telefono:string='3178444562';
- claveAcceso:string='el huevo';
-claveNew:string ="";
-claveValidar:string="";
 
-  constructor( ){};
+  constructor(private personaService: PersonaService, private modalService: NgbModal){}
+
+  usuarioActual :Usuario;
+  usuarioNuevo : Persona;
 
   ngOnInit() {
-
+    this.usuarioNuevo = new Persona;
+    this.usuarioActual = JSON.parse(localStorage.getItem("currentUser"));
   }
 
-  validarNuevaClave(){
-    if(this.claveNew===this.claveValidar){
-      alert("OK ");
-      this.claveNew="";
-      this.claveValidar="";
-    }else{
-      alert("LAS CLAVES NO SON IGUALES");
-    }
+  modificar(){
+    this.usuarioActual.persona.correo = this.usuarioNuevo.correo;
+    this.usuarioActual.persona.telefono = this.usuarioNuevo.telefono;
+    this.usuarioActual.persona.nombre = this.usuarioNuevo.nombre;
 
+    this.personaService.put(this.usuarioActual.persona).subscribe(p => {
+      if (p != null) {
+      const messageBox = this.modalService.open(AlertModalComponent)
+      messageBox.componentInstance.title = "Mensaje";
+      messageBox.componentInstance.message = 'Usuario modificado correctamente';
+      }
+    });
   }
 
 }

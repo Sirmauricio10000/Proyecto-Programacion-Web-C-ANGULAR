@@ -50,15 +50,13 @@ namespace Logica
         {
             try
             {
-                var usuarioViejo = _context.Usuarios.Find(usuarioNuevo.userName);
+                var usuarioViejo = _context.Personas.Find(usuarioNuevo.userName);
                 if (usuarioViejo!=null){
-                    usuarioViejo.userName = usuarioNuevo.userName;
-                    usuarioViejo.userType = usuarioNuevo.userType;
-                    usuarioViejo.password = usuarioNuevo.password;
-                    usuarioViejo.persona = usuarioNuevo.persona;
-                    _context.Usuarios.Update(usuarioViejo);
+                    usuarioViejo = usuarioNuevo.persona;
+                    _context.Personas.Update(usuarioViejo);
                     _context.SaveChanges();
-                    return new GuardarUsuarioResponse(usuarioViejo);
+                    usuarioNuevo.persona = usuarioViejo;
+                    return new GuardarUsuarioResponse(usuarioNuevo);
                 }
                 return new GuardarUsuarioResponse("Error el usuario no existe");
             }
@@ -80,10 +78,13 @@ namespace Logica
             return null;
         }
 
-        public Usuario ConsultarOne(string userName){
+        public GuardarUsuarioResponse ConsultarOne(string userName){
             var usuario = _context.Usuarios.Find(userName);
             usuario.persona = _context.Personas.Find(userName);
-            return usuario;
+            if (usuario==null){
+                return new GuardarUsuarioResponse("Usuario no encontrado");
+            }
+            return new GuardarUsuarioResponse(usuario);
         }
 
 
