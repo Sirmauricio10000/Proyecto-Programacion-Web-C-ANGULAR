@@ -10,6 +10,16 @@
   width="70%" style="margin-left: 10%;">
  <br> <br> <br>
 
+<<<<<<< Updated upstream
+=======
+ <div class="form-group">
+  <input type="text" class="form-control"  name="filtro2" [(ngModel)]="filtro2">
+  <label for="inputState" class="form-label">LISTADO DE ADMINISTRADORES</label>
+  <select *ngFor="let usuario of usuarios |pipe-filtro-nombreAdm:filtro2;index as i"  class="form-select">
+    <option value="Cedula Ciudadania">{{usuario.name}} </option>
+  </select>
+</div>
+>>>>>>> Stashed changes
 
  <br> <br> <br>
 

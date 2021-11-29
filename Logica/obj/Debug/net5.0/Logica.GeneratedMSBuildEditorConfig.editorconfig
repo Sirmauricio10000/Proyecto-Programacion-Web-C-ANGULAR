@@ -6,3 +6,8 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+<<<<<<< Updated upstream
+=======
+build_property.RootNamespace = Logica
+build_property.ProjectDir = C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Logica\
+>>>>>>> Stashed changes

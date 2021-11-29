@@ -22,3 +22,15 @@ D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0
 D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
 D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
 D:\WINDOWS10\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.deps.json
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.dll
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\ref\Entidad.dll
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.pdb
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
+C:\Users\usuario\Documents\GitHub\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb
