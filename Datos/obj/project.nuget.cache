@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qqC0GIjoYX5Q8L1O8uQdmpEFSJKmMCEZo6xl1ohUVhlYbHJCcUpxh/C05TDb38CUUg6D7t8Ap7cmuuyOBw+S6g==",
+  "dgSpecHash": "tATFz+ZpmbCSsM6jn1n/J9rgLL1Hy0xwldbmuGOEh6XJbtImhfBTLy2RAWnQNewxskkdhbLjd2JYPfT0unTBUw==",
   "success": true,
-  "projectFilePath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+  "projectFilePath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
@@ -104,12 +104,5 @@
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

@@ -5936,11 +5936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+      "projectUniqueName": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+      "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\WINDOWS10\\.nuget\\packages\\",
-      "outputPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
+      "outputPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\WINDOWS10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5957,8 +5957,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-              "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+            "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+              "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
             }
           }
         }
@@ -6008,13 +6008,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
