@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {}
+    "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
+    "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+        "projectUniqueName": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+        "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\WINDOWS10\\.nuget\\packages\\",
-        "outputPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
-=======
-    "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
-        "projectName": "Datos",
-        "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
->>>>>>> Stashed changes
+        "outputPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,13 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
-=======
-              "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
->>>>>>> Stashed changes
+              "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+                "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -99,25 +80,14 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+    "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+        "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
         "packagesPath": "C:\\Users\\WINDOWS10\\.nuget\\packages\\",
-        "outputPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\obj\\",
-=======
-    "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
-        "projectName": "Entidad",
-        "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\obj\\",
->>>>>>> Stashed changes
+        "outputPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,25 +140,14 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {
+    "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+        "projectUniqueName": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+        "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
         "packagesPath": "C:\\Users\\WINDOWS10\\.nuget\\packages\\",
-        "outputPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\obj\\",
-=======
-    "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
-        "projectName": "Logica",
-        "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\obj\\",
->>>>>>> Stashed changes
+        "outputPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WINDOWS10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -205,19 +164,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
-                "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
+              "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
+                "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
               },
-              "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
-=======
-              "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
-              },
-              "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
->>>>>>> Stashed changes
+              "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+                "projectPath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
               }
             }
           }

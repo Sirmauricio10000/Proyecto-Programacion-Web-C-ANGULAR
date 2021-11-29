@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "IFm3Kt3/VTx2At++kJAGcdJ8euqb4PJoF4AirkSSO9qyfpfVv8ytHZpIX1AD0Z30WnEM/iddiyVgboMSR2mhkQ==",
+  "dgSpecHash": "XKYsWmFteJyLP/5IuP/zynfLwvPkrtDY7iArN0VLehJzDt5Y72cklBuJCy7TW3HUREH8kafsu3y2S6kgoxXdAg==",
   "success": true,
-  "projectFilePath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
-=======
-  "dgSpecHash": "q51t9otytdvEZLa/otk2PficiA6UaXZk7yxjBB2xkIBiPDbFihOwhF67re8G8VEDh9xfvuuXZ3ANwqUGKQRutw==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
->>>>>>> Stashed changes
+  "projectFilePath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
@@ -110,5 +104,12 @@
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

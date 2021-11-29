@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "tATFz+ZpmbCSsM6jn1n/J9rgLL1Hy0xwldbmuGOEh6XJbtImhfBTLy2RAWnQNewxskkdhbLjd2JYPfT0unTBUw==",
+  "dgSpecHash": "qqC0GIjoYX5Q8L1O8uQdmpEFSJKmMCEZo6xl1ohUVhlYbHJCcUpxh/C05TDb38CUUg6D7t8Ap7cmuuyOBw+S6g==",
   "success": true,
-  "projectFilePath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
-=======
-  "dgSpecHash": "Sq15OQjycsf3bI7d656Gw7Jh0Ymu/+egEvlFMiIzKV/ZzzjlOmoJnapYzspoVKA5csTEAteqgjY8+OLOma/xMQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
->>>>>>> Stashed changes
+  "projectFilePath": "d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
@@ -110,5 +104,12 @@
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché d:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
