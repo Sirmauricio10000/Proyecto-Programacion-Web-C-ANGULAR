@@ -34,6 +34,7 @@ import { ConsultarPerfilFuncionarioComponent } from './proyecto/Funcionario/cons
 import { PersonaService } from './services/persona.service';
 import { UsuarioService } from './services/usuario.service';
 import { PeticionService } from './services/peticion.service';
+import {PipeFiltroNombreAdmPipe} from './proyecto/pipes/pipe-filtro-nombreAdm.pipe'
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { PeticionService } from './services/peticion.service';
     AlertModalComponent,
     ConcederPermisosComponent,
     ConsultarPerfilFuncionarioComponent,
+    PipeFiltroNombreAdmPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
