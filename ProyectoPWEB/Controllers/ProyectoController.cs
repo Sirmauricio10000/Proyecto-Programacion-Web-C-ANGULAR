@@ -105,6 +105,20 @@ namespace ProyectoPWEB.Controllers
             return Ok(response.Proyecto);
         }
 
+        [HttpDelete("{reference}")]
+        public ActionResult<string> Delete(string reference)
+        {
+            var response = proyectoService.Eliminar(reference);
+            if (response.Error)
+            {
+                ModelState.AddModelError("Eliminar proyecto", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+            return BadRequest(response.Mensaje);
+            }
+            return Ok(response.Proyecto);
+        }
+
         private Proyecto MapearProyectoUpdate(ProyectoUpdateModel proyectoInput)
         {
             var proyecto =

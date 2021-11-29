@@ -26,10 +26,17 @@ export class UsuarioService {
   }
 
   getOne(userName: string) : Observable<Usuario> {
-    return this.http.get<Usuario>(this.baseUrl + 'api/Usuario'+userName)
+    return this.http.get<Usuario>(this.baseUrl + 'api/Usuario/'+userName)
       .pipe(tap(),
         catchError(this.handleErrorService.handleError<Usuario>('Consulta Usuario', null))
       );
+  }
+
+  getPassword(usuario: Usuario) : Observable<Usuario> {
+    return this.http.patch<Usuario>(this.baseUrl + 'api/Usuario/', usuario)
+    .pipe(tap(),
+      catchError(this.handleErrorService.handleError<Usuario>('Password', null))
+    )
   }
 
   post(usuario: Usuario): Observable<Usuario> {
