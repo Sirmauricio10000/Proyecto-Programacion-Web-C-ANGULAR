@@ -5937,11 +5937,19 @@
     "version": "1.0.0",
     "restore": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
       "projectName": "Datos",
       "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\WINDOWS10\\.nuget\\packages\\",
       "outputPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+      "projectName": "Datos",
+      "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\obj\\",
+>>>>>>> Stashed changes
 =======
       "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
       "projectName": "Datos",
@@ -5966,8 +5974,13 @@
           "targetAlias": "net5.0",
           "projectReferences": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
               "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+=======
+            "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+              "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+>>>>>>> Stashed changes
 =======
             "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
               "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"

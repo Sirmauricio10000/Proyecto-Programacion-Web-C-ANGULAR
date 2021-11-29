@@ -5956,11 +5956,19 @@
     "version": "1.0.0",
     "restore": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
       "projectName": "Logica",
       "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
       "packagesPath": "C:\\Users\\WINDOWS10\\.nuget\\packages\\",
       "outputPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+      "projectName": "Logica",
+      "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\obj\\",
+>>>>>>> Stashed changes
 =======
       "projectUniqueName": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
       "projectName": "Logica",
@@ -5985,17 +5993,23 @@
           "targetAlias": "net5.0",
           "projectReferences": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
               "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
             },
             "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
               "projectPath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
 =======
+=======
+>>>>>>> Stashed changes
             "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
               "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
             },
             "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
               "projectPath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             }
           }
