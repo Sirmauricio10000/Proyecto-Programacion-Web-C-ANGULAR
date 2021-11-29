@@ -1,3 +1,4 @@
+/*
 import { Injectable } from '@angular/core';
 import {
     HttpRequest,
@@ -22,4 +23,4 @@ export class JwtInterceptor implements HttpInterceptor {
         }
         return next.handle(request);
     }
-}
+} */

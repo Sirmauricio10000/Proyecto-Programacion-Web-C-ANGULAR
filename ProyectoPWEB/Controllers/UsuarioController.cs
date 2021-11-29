@@ -89,7 +89,7 @@ namespace ProyectoPWEB.Controllers
         
 
         [HttpPut]
-        public ActionResult<Usuario> Put(UsuarioUpdateModel usuarioUpdate)
+        public ActionResult<string> Put(UsuarioUpdateModel usuarioUpdate)
         {
             Usuario usuario = MapearUsuarioUpdate(usuarioUpdate);
             var response = usuarioService.Actualizar(usuario);

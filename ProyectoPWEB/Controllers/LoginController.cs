@@ -10,6 +10,7 @@ using ProyectoPWEB.Models;
 
 namespace ProyectoPWEB.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class LoginController : ControllerBase

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -76,15 +77,12 @@ namespace ProyectoPWEB.Controllers
         }
 
         [HttpPut]
-        public ActionResult<Persona> Put(PersonaUpdateModel personaUpdate)
+        public ActionResult<string> Put(PersonaUpdateModel personaUpdate)
         {
             Persona persona = MapearPersonaUpdate(personaUpdate);
             var response = personaService.Actualizar(persona);
             if (response.Error)
             {
-                ModelState.AddModelError("Modificar persona", response.Mensaje);
-                var problemDetails = new ValidationProblemDetails(ModelState)
-                    { Status = StatusCodes.Status400BadRequest };
                  return BadRequest(response.Mensaje);
             }
             return Ok(response.Persona);

@@ -1,23 +1,18 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 using Entidad;
 
 namespace ProyectoPWEB.Models
 {
     public class PersonaInputModel
     {
-        [Required(ErrorMessage = "La identificacion es requerida")]
         public string identificacion {get; set;}
-
-        [Required(ErrorMessage = "El tipo de identificacion es requerido")]
         public string tipoIdentificacion {get; set;}
-
-        [Required(ErrorMessage = "El nombre es requerido")]
         public string nombre{get; set;}
-
-        [Required(ErrorMessage = "El correo es requerido")]
         public string correo{get; set;}
-
-        [Required(ErrorMessage = "El telefono es requerido")]
         public string telefono{get; set;}
     }
 

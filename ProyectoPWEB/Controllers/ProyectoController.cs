@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Datos;
 using Entidad;
 using Logica;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -72,6 +73,21 @@ namespace ProyectoPWEB.Controllers
                 return MapearProyectoView(proyectos);
             }
             return new List<ProyectoViewModel>();
+        }
+
+
+        [HttpGet("{reference}")]
+        public ActionResult<ProyectoViewModel> Get(string reference)
+        {
+            var response =  proyectoService.ConsultarOne(reference);
+            if (!response.Error){
+                var proyecto = new ProyectoViewModel(response.Proyecto);
+                return Ok(proyecto);
+            }
+            ModelState.AddModelError("Buscar proyecto", response.Mensaje);
+            var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+            return BadRequest(response.Mensaje);
         }
 
         [HttpPut]

@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 import { Proyecto } from '../../models/proyecto';
+import { Usuario } from '../../models/usuario';
 
 @Component({
   selector: 'app-consultar-proyecto-estudiante',
@@ -11,26 +12,20 @@ import { Proyecto } from '../../models/proyecto';
 })
 export class ConsultarProyectoEstudianteComponent implements OnInit {
 
-  constructor(private proyectoService: ProyectoService, private modalService: NgbModal) { }
+  constructor(private proyectoService: ProyectoService) { }
 
-  codigoProyecto: number;
+  usuario: Usuario;
+  reference: string;
   proyecto: Proyecto;
-  proyectos: Proyecto[];
-  ngOnInit() {
-    this.proyecto = new Proyecto;
-  }
 
-  consultar(){
-    this.proyectoService.get().subscribe(result => {this.proyectos = result;});
-    this.proyectos.forEach(key => {
-      if(key.codigoProyecto==this.codigoProyecto)
-      {
-        this.proyecto = new Proyecto;
-        this.proyecto = key;
-        const messageBox = this.modalService.open(AlertModalComponent)
-        messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.message = 'Consulta exitosa';
-      }
+  ngOnInit() {
+    this.usuario = new Usuario;
+    this.proyecto = new Proyecto;
+    this.usuario = JSON.parse(localStorage.getItem("currentUser"));
+    this.reference = this.usuario.userName;
+
+    this.proyectoService.getOne(this.reference).subscribe(result => {
+      this.proyecto = result;
     });
   }
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
 import { Proyecto } from '../proyecto/models/proyecto';
 
@@ -22,6 +22,13 @@ export class ProyectoService {
     return this.http.get<Proyecto[]>(this.baseUrl + 'api/Proyecto')
       .pipe(tap(),
         catchError(this.handleErrorService.handleError<Proyecto[]>('Consulta Proyecto', null))
+      );
+  }
+
+  getOne(reference: string) : Observable<Proyecto> {
+    return this.http.get<Proyecto>(this.baseUrl + 'api/Proyecto/'+reference)
+      .pipe(tap(),
+        catchError(this.handleErrorService.handleError<Proyecto>('Consulta Proyecto', null))
       );
   }
 

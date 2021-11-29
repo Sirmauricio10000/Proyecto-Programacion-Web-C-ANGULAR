@@ -59,6 +59,28 @@ namespace Logica
             return proyectos;
         }
 
+        public GuardarProyectoResponse ConsultarOne(string reference){
+            var proyecto = _context.Proyectos.Where(p => p.referenciaInvestigadorPrincipal == reference || 
+            p.referenciaInvestigadorSecundario == reference).FirstOrDefault();
+
+            proyecto.investigadorPrincipal = _context.Usuarios.Find(proyecto.referenciaInvestigadorPrincipal);
+            proyecto.investigadorPrincipal.persona = _context.Personas.Find(proyecto.referenciaInvestigadorPrincipal);
+            proyecto.investigadorSecundario = _context.Usuarios.Find(proyecto.referenciaInvestigadorSecundario);
+            proyecto.investigadorSecundario.persona = _context.Personas.Find(proyecto.referenciaInvestigadorSecundario);
+            if (proyecto.referenciaEvaluadorProyecto1!= null){
+                proyecto.evaluadorProyecto1 = _context.Usuarios.Find(proyecto.referenciaEvaluadorProyecto1);
+                proyecto.evaluadorProyecto1.persona = _context.Personas.Find(proyecto.referenciaEvaluadorProyecto1);
+            }
+            if (proyecto.referenciaEvaluadorProyecto2!= null){
+                proyecto.evaluadorProyecto2 = _context.Usuarios.Find(proyecto.referenciaEvaluadorProyecto2);
+                proyecto.evaluadorProyecto2.persona = _context.Personas.Find(proyecto.referenciaEvaluadorProyecto2);
+            }
+            if (proyecto==null){
+                return new GuardarProyectoResponse("Proyecto no encontrado");
+            }
+            return new GuardarProyectoResponse(proyecto);
+        }
+
          public GuardarProyectoResponse Actualizar(Proyecto proyectoNuevo)
         {
             try

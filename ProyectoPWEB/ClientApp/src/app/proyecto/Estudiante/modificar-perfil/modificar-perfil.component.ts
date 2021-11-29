@@ -29,11 +29,15 @@ export class ModificarPerfilComponent implements OnInit {
     this.usuarioActual.persona.telefono = this.usuarioNuevo.telefono;
     this.usuarioActual.persona.nombre = this.usuarioNuevo.nombre;
 
+
+    alert(JSON.stringify(this.usuarioActual.persona));
+
     this.personaService.put(this.usuarioActual.persona).subscribe(p => {
       if (p != null) {
       const messageBox = this.modalService.open(AlertModalComponent)
       messageBox.componentInstance.title = "Mensaje";
       messageBox.componentInstance.message = 'Usuario modificado correctamente';
+      this.usuarioActual.persona = p;
       }
     });
   }

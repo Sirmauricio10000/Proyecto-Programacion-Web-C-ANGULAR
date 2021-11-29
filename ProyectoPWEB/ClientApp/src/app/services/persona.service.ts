@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -18,10 +18,24 @@ export class PersonaService {
     this.baseUrl = baseUrl;
   }
 
-  put(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(this.baseUrl + 'api/Persona', persona)
+  get(): Observable<Persona[]> {
+    return this.http.get<Persona[]>(this.baseUrl + 'api/Persona')
       .pipe(tap(),
-        catchError(this.handleErrorService.handleError<Persona>('Actualizar Persona', null))
+        catchError(this.handleErrorService.handleError<Persona[]>('Consulta Persona', null))
       );
+  }
+
+  post(persona: Persona): Observable<Persona> {
+    return this.http.post<Persona>(this.baseUrl + 'api/Persona', persona)
+      .pipe(tap(),
+        catchError(this.handleErrorService.handleError<Persona>('Registrar Persona', null))
+      );
+  }
+
+  put(persona: Persona): Observable<Persona> {
+    return this.http.put<Persona> (this.baseUrl + 'api/Persona', persona)
+    .pipe(tap(),
+      catchError(this.handleErrorService.handleError<Persona>('Actualizar Persona', null))
+    );
   }
 }
