@@ -14,6 +14,9 @@ export class ConsultarProyectoEstudianteComponent implements OnInit {
 
   constructor(private proyectoService: ProyectoService) { }
 
+  evaluador1: string = "Sin Asignar";
+  evaluador2: string = "Sin Asignar";
+  comentarios: string = "Sin Comentarios";
   usuario: Usuario;
   reference: string;
   proyecto: Proyecto;
@@ -26,6 +29,9 @@ export class ConsultarProyectoEstudianteComponent implements OnInit {
 
     this.proyectoService.getOne(this.reference).subscribe(result => {
       this.proyecto = result;
+      if (this.proyecto.evaluadorProyecto1!= null) this.evaluador1 = this.proyecto.evaluadorProyecto1.persona.nombre;
+      if (this.proyecto.evaluadorProyecto2!= null) this.evaluador2 = this.proyecto.evaluadorProyecto2.persona.nombre;
+      if (this.proyecto.comentariosProyecto!= null) this.comentarios = this.proyecto.comentariosProyecto;
     });
   }
 }

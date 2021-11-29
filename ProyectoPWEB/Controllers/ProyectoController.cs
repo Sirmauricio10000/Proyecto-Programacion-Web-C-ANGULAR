@@ -97,7 +97,10 @@ namespace ProyectoPWEB.Controllers
             var response = proyectoService.Actualizar(proyecto);
             if (response.Error)
             {
-                return BadRequest(response.Mensaje);
+                ModelState.AddModelError("Buscar proyecto", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+            return BadRequest(response.Mensaje);
             }
             return Ok(response.Proyecto);
         }

@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 import { Proyecto } from '../../models/proyecto';
+import { Usuario } from '../../models/usuario';
 
 @Component({
   selector: 'app-modificar-proyecto',
@@ -13,51 +14,41 @@ export class ModificarProyectoComponent implements OnInit {
 
   constructor(private proyectoService: ProyectoService, private modalService:NgbModal) { }
 
-  codigoProyecto: number;
-  linkProyecto: string;
-  tituloProyecto: string;
-  lineaDeInvestigacion: string;
-  grupoDeInvestigacion: string;
-  tipoProyecto: string;
-  areaProyecto: string;
+  usuario: Usuario;
+  reference: string;
+  proyectoViejo: Proyecto;
+  proyectoNuevo: Proyecto;
 
-  proyecto: Proyecto;
-  proyectos: Proyecto[];
   ngOnInit() {
-    this.proyectoService.get().subscribe(result => {this.proyectos = result;});
+    this.usuario = new Usuario;
+    
+    this.proyectoNuevo = new Proyecto;
+    this.usuario = JSON.parse(localStorage.getItem("currentUser"));
+    this.reference = this.usuario.userName;
+
+    this.proyectoViejo = new Proyecto;
+    this.proyectoService.getOne(this.reference).subscribe(result => {
+      this.proyectoViejo = result;
+    });
   }
 
   modificar(){
-   /* this.proyectoService.get().subscribe(result => {this.proyectos = result;});
 
-    this.proyectos.forEach(key => {
-      if(key.codigoProyecto==this.codigoProyecto)
-      {
-        key.grupoDeInvestigacion = this.grupoDeInvestigacion;
-        key.linkProyecto = this.linkProyecto;
-        key.tituloProyecto = this.tituloProyecto;
-        key.lineaDeInvestigacion = this.lineaDeInvestigacion;
-        key.tipoProyecto = this.tipoProyecto;
-        key.areaProyecto = this.areaProyecto;
-        key.referenciaInvestigadorPrincipal = key.investigadorPrincipal.identificacionUsuario;
-        key.referenciaInvestigadorSecundario = key.investigadorSecundario.identificacionUsuario;
-        if (key.referenciaEvaluadorProyecto1 != null){
-          key.referenciaEvaluadorProyecto1 = key.evaluadorProyecto1.identificacionUsuario;
-        }
-        if (key.referenciaEvaluadorProyecto2 != null){
-          key.referenciaEvaluadorProyecto2 = key.evaluadorProyecto2.identificacionUsuario;
-        }
-        this.proyecto = new Proyecto;
-        this.proyecto = key;
-      }
-    });
-    this.proyectoService.put(this.proyecto).subscribe(p => {
-      if (p != null) {
+    this.proyectoViejo.tituloProyecto = this.proyectoNuevo.tituloProyecto;
+    this.proyectoViejo.grupoDeInvestigacion = this.proyectoNuevo.grupoDeInvestigacion;
+    this.proyectoViejo.areaProyecto = this.proyectoNuevo.areaProyecto;
+    this.proyectoViejo.lineaDeInvestigacion = this.proyectoNuevo.lineaDeInvestigacion;
+    this.proyectoViejo.tipoProyecto = this.proyectoNuevo.tipoProyecto;
+
+
+    this.proyectoService.put(this.proyectoViejo).subscribe(result => {
+      if (result != null) {
       const messageBox = this.modalService.open(AlertModalComponent)
-      messageBox.componentInstance.title = "Resultado Operación";
+      messageBox.componentInstance.title = "Mensaje";
       messageBox.componentInstance.message = 'Proyecto modificado correctamente';
-      this.proyecto = p;
       }
-    }); */
+    })
   }
+
 }
+

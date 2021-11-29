@@ -19,6 +19,7 @@ export class RegistroProyectoComponent implements OnInit {
   }
 
   registrar() {
+    this.proyecto.estadoProyecto = "Primera Entrega - Por revisar"
     this.proyectoService.post(this.proyecto).subscribe(p => {
       if (p != null) {
       const messageBox = this.modalService.open(AlertModalComponent)
