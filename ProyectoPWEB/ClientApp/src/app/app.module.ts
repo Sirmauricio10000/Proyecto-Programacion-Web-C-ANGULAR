@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -34,7 +35,6 @@ import { PersonaService } from './services/persona.service';
 import { UsuarioService } from './services/usuario.service';
 import { PeticionService } from './services/peticion.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +66,7 @@ import { PeticionService } from './services/peticion.service';
     HttpClientModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: 'app-home', component: HomeComponent, canActivate: [AuthGuard]},
       { path: 'app-registro-proyecto', component: RegistroProyectoComponent, canActivate: [AuthGuard]},

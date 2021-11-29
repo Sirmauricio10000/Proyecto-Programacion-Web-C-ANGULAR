@@ -1,3 +1,66 @@
 <div>
     <app-nav-menu></app-nav-menu>
 </div>
+<div class="contaier">
+
+  <br> <br>
+  <h1>Peticiones, Quejas , Reglamos UPC </h1>
+  <br>
+
+  <img class="rounded mx-auto d-block" src="https://comfenalco.com.co/wp-content/uploads/2019/05/icono_pqrsf2.png" width="20%" alt="">
+  <br>
+  <br>
+
+
+  <form [formGroup]="formularioNombre" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label class="form-label">Nombre Completo</label>
+      <input [(ngModel)]="nombre" [class.is-invalid]="formularioNombre.get('Nombre1').touched && formularioNombre.get('Nombre1').invalid"
+        formControlName="Nombre1" type="text" class="form-control" id="nombre" name="nombre" >
+      <div *ngIf="formularioNombre.get('Nombre1').touched && formularioNombre.get('Nombre1').invalid">
+        No ha digitado su nombre
+      </div>
+      <br> <br> <br>
+    </div>
+
+    <div class="col-md-4">
+      <label class="form-label">N# Identificacion</label>
+      <input [(ngModel)]="identificacion"
+       [class.is-invalid]="formularioNombre.get('Nombre2').touched && formularioNombre.get('Nombre2').invalid"
+        formControlName="Nombre2" type="text" class="form-control" id="identificacion" name="identificacion">
+      <div *ngIf="formularioNombre.get('Nombre2').touched && formularioNombre.get('Nombre2').invalid">
+        No ha digitado su identificacion
+      </div>
+      <br> <br> <br>
+    </div>
+
+    <div class="col-md-4">
+      <label class="form-label">Asunto de la peticion</label>
+      <input [(ngModel)]="asunto"
+      [class.is-invalid]="formularioNombre.get('Nombre3').touched && formularioNombre.get('Nombre3').invalid"
+        formControlName="Nombre3" type="text" class="form-control" id="asunto" name="asunto">
+      <div *ngIf="formularioNombre.get('Nombre3').touched && formularioNombre.get('Nombre3').invalid">
+        Si asunto, su peticion no sera tomada enserio
+      </div>
+      <br> <br> <br>
+    </div>
+
+    <label style="text-align: center;">Comentarios del proyecto</label>
+    <div class="form-floating">
+      <textarea [(ngModel)]="comentarios"
+      [class.is-invalid]="formularioNombre.get('Nombre4').touched && formularioNombre.get('Nombre4').invalid"
+        formControlName="Nombre4" class="form-control" id="comentarios" name="comentarios" style="height: 100px"></textarea>
+      <div *ngIf="formularioNombre.get('Nombre4').touched && formularioNombre.get('Nombre4').invalid">
+        Sin Comentarios de su PQR , no sera respondida
+      </div>
+    </div>
+    <br> <br>
+
+
+    <div class="col-12">
+      <button style="margin-left: 45%;" [disabled]="!formularioNombre.valid" class="btn btn-primary" type="button"
+        (click)="registrarPeticion()">Registrar nueva peticion</button>
+    </div>
+  </form>
+
+</div>
