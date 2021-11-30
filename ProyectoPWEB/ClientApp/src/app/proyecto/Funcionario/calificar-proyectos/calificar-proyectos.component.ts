@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calificar-proyectos.component.css']
 })
 export class CalificarProyectosComponent implements OnInit {
-
+  filtro: string;
   constructor() { }
 
   ngOnInit() {
