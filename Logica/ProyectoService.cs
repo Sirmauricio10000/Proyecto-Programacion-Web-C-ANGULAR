@@ -117,22 +117,6 @@ namespace Logica
             }
         }
 
-        public GuardarProyectoResponse Eliminar(string reference){
-            try{
-                var proyecto = _context.Proyectos.Where(p => p.referenciaInvestigadorPrincipal==reference ||
-                p.referenciaInvestigadorSecundario == reference).FirstOrDefault();
-                if (proyecto==null){
-                    return new GuardarProyectoResponse("Error el proyecto no existe");
-                }
-                _context.Proyectos.Remove(proyecto);
-                _context.SaveChanges();
-                return new GuardarProyectoResponse(proyecto);
-            } catch (Exception e){
-                return new GuardarProyectoResponse(e.Message);
-            }
-            
-        }
-
         public class GuardarProyectoResponse
         {
             public GuardarProyectoResponse(Proyecto proyecto)

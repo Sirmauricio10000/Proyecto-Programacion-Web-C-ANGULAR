@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "5WHLASHl61JwmF5tKwIXa7xz+jdXU2+y2tBPe8fE8HlWcOtcxDrAxmZyVETd7Ruuq/Seiz8yw85d7wB55IjJpA==",
   "success": true,
   "projectFilePath": "D:\\WINDOWS10\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+=======
+  "dgSpecHash": "6bhgAXOxJi5gFbm192NUEKSe6zM++H/8ATdf8nmsp7kO9PTSSr5nnU+VXcd5N4M4v01Z3/1VfSzDh5Z7LZKXeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\usuario\\Documents\\GitHub\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS10\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],

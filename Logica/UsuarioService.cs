@@ -78,17 +78,6 @@ namespace Logica
             return null;
         }
 
-        public GuardarUsuarioResponse ValidatePass(Usuario usuario) 
-        {
-            var respuesta = _context.Usuarios.Where(p => p.userName == usuario.userName &&
-             p.password == usuario.password).FirstOrDefault();
-
-            if (respuesta!= null){
-                return new GuardarUsuarioResponse(respuesta);
-            }
-            return new GuardarUsuarioResponse("Contraseña incorrecta");
-        }
-
         public GuardarUsuarioResponse ConsultarOne(string userName){
             var usuario = _context.Usuarios.Find(userName);
             usuario.persona = _context.Personas.Find(userName);

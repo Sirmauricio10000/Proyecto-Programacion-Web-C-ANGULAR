@@ -45,11 +45,4 @@ export class ProyectoService {
         catchError(this.handleErrorService.handleError<Proyecto>('Actualizar Proyecto', null))
       );
   }
-
-  delete(reference: string): Observable<Proyecto> {
-    return this.http.delete<Proyecto>(this.baseUrl + 'api/Proyecto/'+ reference)
-    .pipe(tap(),
-      catchError(this.handleErrorService.handleError<Proyecto>('Elimiar Proyecto', null))
-    );
-  }
 }

@@ -73,21 +73,6 @@ namespace ProyectoPWEB.Controllers
             return usuarios;
         }
 
-        [HttpPatch]
-        public ActionResult<string> GetPassword(Usuario usuario)
-        {
-            var respuesta = usuarioService.ValidatePass(usuario);
-            if (respuesta.Error)
-            {
-                ModelState.AddModelError("Error de Contraseña", respuesta.Mensaje);
-                var problemDetails =
-                    new ValidationProblemDetails(ModelState)
-                    { Status = StatusCodes.Status400BadRequest };
-                return BadRequest(problemDetails);
-            }
-            return Ok(usuario);
-        }
-
         [HttpGet("{userName}")]
         public ActionResult<UsuarioViewModel> Get(string userName)
         {
