@@ -9,13 +9,13 @@ namespace ProyectoPWEB.Models
 {
     public class ProyectoInputModel
     {
-        [Required(ErrorMessage = "El titulo del proyecto es requerido"), MinLength(4), MaxLength(30)]
+        [Required(ErrorMessage = "El titulo del proyecto es requerido"), MinLength(4)]
         public string tituloProyecto {get; set;}
-        [Required(ErrorMessage = "La identificacion del investigador principal es requerida"), MinLength(4), MaxLength(30)]
+        [Required(ErrorMessage = "La identificacion del investigador principal es requerida")]
         public string referenciaInvestigadorPrincipal {get;set;}
-        [Required(ErrorMessage = "La identificacion del investigador secundario es requerida"), MinLength(4), MaxLength(30)]
+        [Required(ErrorMessage = "La identificacion del investigador secundario es requerida")]
         public string referenciaInvestigadorSecundario {get;set;}
-        [Required(ErrorMessage = "El grupo de investigacion es requerido"), MinLength(4), MaxLength(30)]
+        [Required(ErrorMessage = "El grupo de investigacion es requerido"), MinLength(4)]
         public string grupoDeInvestigacion {get; set;}
         [Required(ErrorMessage = "El area del proyecto es requerida")]
         public string areaProyecto {get; set;}
@@ -26,7 +26,7 @@ namespace ProyectoPWEB.Models
         [Required(ErrorMessage = "El tipo de proyecto es requerido")]
         public string tipoProyecto {get; set;}
         public DateTime fechaPresentacion {get; set;}
-        [Required(ErrorMessage = "El link del proyecto es requerido"), MaxLength(30)]
+        [Required(ErrorMessage = "El link del proyecto es requerido")]
         public string linkProyecto {get; set;}
         public string estadoProyecto {get; set;}
         public string comentariosProyecto {get; set;}
@@ -71,7 +71,7 @@ namespace ProyectoPWEB.Models
 
     public class ProyectoUpdateModel: ProyectoInputModel
     {
-        [Required(ErrorMessage = "El codigo del proyecto es requerido")]
+
         public int codigoProyecto {get; set;}
     }
 
