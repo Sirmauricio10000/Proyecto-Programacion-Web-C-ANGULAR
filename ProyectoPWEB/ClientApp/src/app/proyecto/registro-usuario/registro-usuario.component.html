@@ -8,27 +8,38 @@
     <br>
     <br>
     <br>
-
-    <div class="form-group">
+    <form [formGroup]="formularioNombre">
+        <div class="form-group">
         <label for="inputState" class="form-label">Tipo de Identificación</label>
-        <select [(ngModel)]="persona.tipoIdentificacion"  name="tipoId" id="inputState" class="form-select">
+        <select formControlName="Nombre7"  [class.is-invalid]="formularioNombre.get('Nombre7').touched && formularioNombre.get('Nombre7').invalid"
+         [(ngModel)]="persona.tipoIdentificacion"  name="tipoId" id="inputState" class="form-select">
           <option value="Cedula Ciudadania">Cedula Ciudadania </option>
           <option value="Cedula Extranjera">Cedula Extranjera</option>
           <option value="Tarjeta de Identidad">Tarjeta de Identidad </option>
           <option value="Pasaporte">Pasaporte </option>
         </select>
-      </div>
+        <div *ngIf="formularioNombre.get('Nombre7').touched && formularioNombre.get('Nombre7').invalid">
+         Porfavor , Selecione el tipo de documento
+         </div>
+        </div>
 
         <div id="contenedor2TelCorreo">
             <div class="row g-2">
                 <div class="col-sm-5">
                     <span>Identificacion</span><br>
-                    <input id="id" type="text" class="form-control" aria-label="City" name="id" [(ngModel)]="usuario.userName">
-                </div>
+                    <input formControlName="Nombre1"  [class.is-invalid]="formularioNombre.get('Nombre1').touched && formularioNombre.get('Nombre1').invalid"
+                     id="id" type="text" class="form-control" aria-label="City" name="id" [(ngModel)]="usuario.userName">
+                     <div *ngIf="formularioNombre.get('Nombre1').touched && formularioNombre.get('Nombre1').invalid">
+                      Numero de documentacion requerida
+                      </div>
+                    </div>
 
                 <div class="col-sm-5">
                     <span>Nombre</span><br>
-                    <input name="nombre" type="text" class="form-control" aria-label="State" [(ngModel)]="persona.nombre">
+                    <input formControlName="Nombre2"  [class.is-invalid]="formularioNombre.get('Nombre2').touched && formularioNombre.get('Nombre2').invalid" name="nombre" type="text" class="form-control" aria-label="State" [(ngModel)]="persona.nombre">
+                    <div *ngIf="formularioNombre.get('Nombre2').touched && formularioNombre.get('Nombre2').invalid">
+                      No ha digitado su nombre
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,13 +49,20 @@
             <div class="row g-2">
                 <div class="col-sm-5">
                     <span>Telefono</span><br>
-                    <input name="telefono" type="text" class="form-control" aria-label="City" [(ngModel)]="persona.telefono">
-                </div>
+                    <input formControlName="Nombre3"  [class.is-invalid]="formularioNombre.get('Nombre3').touched && formularioNombre.get('Nombre3').invalid"
+                     name="telefono" type="text" class="form-control" aria-label="City" [(ngModel)]="persona.telefono">
+                     <div *ngIf="formularioNombre.get('Nombre3').touched && formularioNombre.get('Nombre3').invalid">
+                      Numero de contacto , faltante
+                    </div>
+                    </div>
 
                 <div class="col-sm-5">
                     <span>Correo Electronico</span><br>
-                    <input name="correo" type="text" class="form-control" aria-label="State" [(ngModel)]="persona.correo">
-                </div>
+                    <input formControlName="Nombre4"  [class.is-invalid]="formularioNombre.get('Nombre4').touched && formularioNombre.get('Nombre4').invalid" name="correo" type="text" class="form-control" aria-label="State" [(ngModel)]="persona.correo">
+                    <div *ngIf="formularioNombre.get('Nombre4').touched && formularioNombre.get('Nombre4').invalid">
+                      Correo electronico , no llenado
+                    </div>
+                  </div>
             </div>
         </div>
 
@@ -54,20 +72,28 @@
             <div class="row g-2">
                 <div class="col-sm-5">
                     <span>Contraseña</span><br>
-                    <input name="password1" type="password" class="form-control" aria-label="City" [(ngModel)]="usuario.validatePass">
-                </div>
+                    <input formControlName="Nombre5"  [class.is-invalid]="formularioNombre.get('Nombre5').touched && formularioNombre.get('Nombre5').invalid" name="password1" type="password" class="form-control" aria-label="City" [(ngModel)]="usuario.validatePass">
+                    <div *ngIf="formularioNombre.get('Nombre5').touched && formularioNombre.get('Nombre5').invalid">
+                      Contraseña no registrada
+                    </div>
+                  </div>
 
                 <div class="col-sm-5">
                     <span>Confirme contraseña</span><br>
-                    <input name="password2" type="password" class="form-control" aria-label="State" [(ngModel)]="usuario.password">
-                </div>
+                    <input formControlName="Nombre6"  [class.is-invalid]="formularioNombre.get('Nombre6').touched && formularioNombre.get('Nombre6').invalid"
+                     name="password2" type="password" class="form-control" aria-label="State" [(ngModel)]="usuario.password">
+                     <div *ngIf="formularioNombre.get('Nombre6').touched && formularioNombre.get('Nombre6').invalid">
+                      Comfirmacion de contraseña , no llenada
+                    </div>
+                    </div>
             </div>
         </div>
 
         <br> <br>
         <div style="text-align:center">
-            <button type="button" class="btn btn-success" (click)="registrar()">Registrarse</button>
+            <button [disabled]="!formularioNombre.valid" type="button" class="btn btn-success" (click)="registrar()">Registrarse</button>
             <button type="button" class="btn btn-danger" style="margin-left: 5px" (click)="atras()">Atras</button>
         </div>
         <br><br><br>
-</div>
+      </form>
+    </div>
