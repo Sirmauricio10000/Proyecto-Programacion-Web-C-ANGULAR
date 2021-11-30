@@ -9,10 +9,15 @@ namespace ProyectoPWEB.Models
 {
     public class PersonaInputModel
     {
+        [Required, MinLength(4)]
         public string identificacion {get; set;}
+        [Required, MinLength(4)]
         public string tipoIdentificacion {get; set;}
+        [Required, MinLength(4)]
         public string nombre{get; set;}
+        [Required, MinLength(4)]
         public string correo{get; set;}
+        [Required, MinLength(4)]
         public string telefono{get; set;}
     }
 

@@ -24,6 +24,9 @@ namespace Logica
             {
                 var idBuscada1 = _context.Usuarios.Find(proyecto.referenciaInvestigadorPrincipal);
                 var idBuscada2 = _context.Usuarios.Find(proyecto.referenciaInvestigadorSecundario);
+                var proyectoYaRegistrado = _context.Proyectos.Where(p => p.referenciaInvestigadorPrincipal == idBuscada1.userName ||
+                p.referenciaInvestigadorPrincipal == idBuscada2.userName || p.referenciaInvestigadorSecundario == idBuscada1.userName 
+                || p.referenciaInvestigadorSecundario == idBuscada2.userName).FirstOrDefault();
 
                 if (idBuscada1 == null){
                      return new GuardarProyectoResponse("Error: La identificacion " + proyecto.referenciaInvestigadorPrincipal + " NO existe");
@@ -33,6 +36,10 @@ namespace Logica
                 }
                 if (proyecto.referenciaInvestigadorPrincipal == proyecto.referenciaInvestigadorSecundario) {
                     return new GuardarProyectoResponse("Error el investigador principal y secundario no pueden ser el mismo.");
+                }
+                if (proyectoYaRegistrado != null){
+                    return new GuardarProyectoResponse("Error: ya se tiene un proyecto registrado con las identificaciones: "
+                     + idBuscada1.userName + ", " +idBuscada2.userName);
                 }
                 proyecto.investigadorPrincipal = _context.Usuarios.Find(proyecto.referenciaInvestigadorPrincipal);
                 proyecto.investigadorSecundario = _context.Usuarios.Find(proyecto.referenciaInvestigadorSecundario);
