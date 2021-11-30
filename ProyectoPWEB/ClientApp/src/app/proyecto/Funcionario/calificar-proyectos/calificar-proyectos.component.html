@@ -1,1 +1,87 @@
-<p>calificar-proyectos works!</p>
+<app-nav-funcionario></app-nav-funcionario>
+<br> <br>
+
+<div class="container">
+
+  <h1>Calificacion de proyectos</h1>
+
+  <img width="25%" class="rounded mx-auto d-block"
+    src="http://1.bp.blogspot.com/-txzvXGF7Zx4/VdIq4V7FOfI/AAAAAAAABlI/e_7iv6w9_D8/s1600/Como-calificar-en-paginas-de-encuestas-remuneradas.png"
+    alt="">
+  <br> <br>
+
+  <h2 style="text-align: center;">Lista de proyectos </h2> <br> <br> <br>
+  <div class="d-grid gap-2 col-3 mx-auto">
+    <input type="text" placeholder="Titulo del proyecto" [(ngModel)]="filtro">
+  </div>
+
+  <br> <br>
+
+  <div class="container">
+    <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <td>Codigo</td>
+          <td>Titulo</td>
+          <td>Evaluador 1</td>
+          <td>Evaluador 2</td>
+          <td>Estado</td>
+          <td>Grupo de Investigacion</td>
+          <td>Fecha Presentacion</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let proyecto of proyectos|ProyectoPipe:filtro;index as i">
+          <td>{{proyecto.codigoProyecto}} </td>
+          <td>{{proyecto.tituloProyecto}} </td>
+          <td>{{proyecto.referenciaEvaluadorProyecto1}} </td>
+          <td>{{proyecto.referenciaEvaluadorProyecto2}} </td>
+          <td>{{proyecto.estadoProyecto}} </td>
+          <td>{{proyecto.grupoDeInvestigacion}} </td>
+          <td>{{proyecto.fechaPresentacion | date:'d/M/yyyy h:mm a'}} </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br> <br> <br>
+
+    <div class="d-grid gap-2 col-3 mx-auto">
+      <input type="text" placeholder="Id del proyecto a calificar">
+    </div>
+
+    <br> <br>
+
+
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+        style="height: 100px"></textarea>
+      <label for="floatingTextarea2">Comentarios del proyecto</label>
+    </div>
+    <br> <br>
+
+
+    <div class="col text-center">
+      <div style="margin-left:30% ;" class="col-md-5">
+        <label for="validationCustom04" class="form-label">Estado de la revicion</label>
+        <select name="tipoId" id="inputState" class="form-select">
+          <option option selected disabled value="Selecione">Seleccion...</option>
+          <option value="Aprobado">Aprobado</option>
+          <option value="Rechazado">Rechazado</option>
+          <option value="Suspendido">Suspendido</option>
+        </select>
+      </div>
+
+      <br> <br>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="button">Registrar calificacion</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <br> <br>
