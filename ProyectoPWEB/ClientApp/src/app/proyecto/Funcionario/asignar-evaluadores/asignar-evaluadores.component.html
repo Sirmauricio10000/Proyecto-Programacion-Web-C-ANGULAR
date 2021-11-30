@@ -18,7 +18,7 @@
         <input type="text" class="form-control" placeholder="ID DEL EVALUADOR 2" name="idEvaluador2" [(ngModel)]="idEvaluador2">
         </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="CODIGO DEL PROYECTO A EVALUAR" name="codigoProyectoEvaluar"  [(ngModel)]="codigoProyectoEvaluar">
+        <input type="text" class="form-control" placeholder="CODIGO DEL PROYECTO A ASIGNAR" name="codigoProyectoEvaluar"  [(ngModel)]="codigoProyectoEvaluar">
       </div>
     </div>
 
@@ -34,10 +34,10 @@
   <table class="table table-success table-striped">
     <thead>
       <tr>
-        <td>Codigo Proyecto</td>
-        <td>Titulo del proyecto</td>
-        <td>ID Evaluador 1</td>
-        <td>ID Evaluador 2</td>
+        <td>Codigo</td>
+        <td>Titulo</td>
+        <td>Evaluador 1</td>
+        <td>Evaluador 2</td>
         <td>Estado</td>
         <td>Grupo de Investigacion</td>
         <td>Fecha Presentacion</td> 
@@ -47,11 +47,11 @@
       <tr *ngFor="let proyecto of proyectos|ProyectoPipe:filtro;index as i">
           <td>{{proyecto.codigoProyecto}} </td>
           <td>{{proyecto.tituloProyecto}} </td>
-          <td>{{proyecto.evaluadorProyecto1.userName}} </td>
-          <td>{{proyecto.evaluadorProyecto2.userName}} </td>
-          <td>{{proyecto.evaluadorProyecto2.estadoProyecto}} </td>
-          <td>{{proyecto.evaluadorProyecto2.grupoDeInvestigacion}} </td>
-          <td>{{proyecto.evaluadorProyecto2.fechaPresentacion}} </td>
+          <td>{{proyecto.referenciaEvaluadorProyecto1}} </td>
+          <td>{{proyecto.referenciaEvaluadorProyecto2}} </td>
+          <td>{{proyecto.estadoProyecto}} </td>
+          <td>{{proyecto.grupoDeInvestigacion}} </td>
+          <td>{{proyecto.fechaPresentacion | date:'d/M/yyyy  h:mm a'}} </td>
       </tr>
   </tbody>
   </table>

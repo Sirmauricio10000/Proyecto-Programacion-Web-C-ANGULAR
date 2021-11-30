@@ -37,10 +37,10 @@ export class ConcederPermisosComponent implements OnInit {
       alert(JSON.stringify(this.usuario));
       this.usuarioService.put(this.usuario).subscribe(result => {
         if (result != null) {
-        const messageBox = this.modalService.open(AlertModalComponent)
-        messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.message = 'Permisos modificados correctamente';
-        this.usuario = result;
+          const messageBox = this.modalService.open(AlertModalComponent)
+          messageBox.componentInstance.title = "Resultado Operación";
+          messageBox.componentInstance.message = 'Permisos modificados correctamente';
+          this.usuario = result;
         }
       });
   }

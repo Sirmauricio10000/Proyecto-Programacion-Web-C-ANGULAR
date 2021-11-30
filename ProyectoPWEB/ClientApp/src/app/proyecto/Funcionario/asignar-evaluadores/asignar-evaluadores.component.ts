@@ -19,10 +19,15 @@ export class AsignarEvaluadoresComponent implements OnInit {
   proyectos: Proyecto[];
   proyecto: Proyecto;
   filtro: string;
-  filtro2: string;
 
   ngOnInit() {
-    this.proyectoService.get().subscribe(result => {this.proyectos = result;});
+    this.proyectoService.get().subscribe(result => {
+      this.proyectos = result;
+      this.proyectos.forEach(p => {
+        if (p.referenciaEvaluadorProyecto1 == null) p.referenciaEvaluadorProyecto1 = "Sin asignar";
+        if (p.referenciaEvaluadorProyecto2 == null) p.referenciaEvaluadorProyecto2 = "Sin asignar";
+      })
+    });
   }
 
   registrarEvaluador(){
