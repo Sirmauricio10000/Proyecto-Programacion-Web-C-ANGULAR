@@ -34,7 +34,7 @@ namespace ProyectoPWEB.Controllers
             var respuesta = proyectoService.Guardar(proyecto);
             if (respuesta.Error)
             {
-                ModelState.AddModelError("Guardar Persona", respuesta.Mensaje);
+                ModelState.AddModelError("Guardar Proyecto", respuesta.Mensaje);
                 var problemDetails =
                     new ValidationProblemDetails(ModelState)
                     { Status = StatusCodes.Status400BadRequest };
