@@ -34,6 +34,7 @@ import { ConsultarPerfilFuncionarioComponent } from './proyecto/Funcionario/cons
 import { PersonaService } from './services/persona.service';
 import { UsuarioService } from './services/usuario.service';
 import { PeticionService } from './services/peticion.service';
+import { CalificarProyectosComponent } from './proyecto/Funcionario/calificar-proyectos/calificar-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { PeticionService } from './services/peticion.service';
     AlertModalComponent,
     ConcederPermisosComponent,
     ConsultarPerfilFuncionarioComponent,
+    CalificarProyectosComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -86,6 +88,8 @@ import { PeticionService } from './services/peticion.service';
       { path: 'app-conceder-permisos', component: ConcederPermisosComponent, canActivate: [AuthGuard]},
       { path: 'app-consultar-perfil-funcionario', component: ConsultarPerfilFuncionarioComponent, canActivate: [AuthGuard]},
       { path: '', component: LoginComponent, pathMatch: 'full' },
+      { path: 'app-calificar-proyectos', component: CalificarProyectosComponent, canActivate: [AuthGuard]},
+
     ]),
   ],
   entryComponents:[AlertModalComponent],

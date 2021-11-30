@@ -32,8 +32,8 @@
             <tbody>
                 <tr *ngFor="let proyecto of proyectos|ProyectoPipe:filtro;index as i">
                     <td>{{proyecto.codigoProyecto}} </td>
-                    <td>{{proyecto.investigadorPrincipal.identificacionUsuario}} </td>
-                    <td>{{proyecto.investigadorSecundario.identificacionUsuario}} </td>
+                    <td>{{proyecto.investigadorPrincipal.userName}} </td>
+                    <td>{{proyecto.investigadorSecundario.userName}} </td>
                     <td>{{proyecto.tituloProyecto}} </td>
                     <td>{{proyecto.areaProyecto}} </td>
                     <td>{{proyecto.lineaDeInvestigacion}} </td>

@@ -90,6 +90,20 @@ namespace ProyectoPWEB.Controllers
             return BadRequest(response.Mensaje);
         }
 
+        [HttpGet("{reference}"+"2")]
+        public ActionResult<ProyectoViewModel> GetByCode(int reference)
+        {
+            var response =  proyectoService.ConsultarOneXCodigo(reference);
+            if (!response.Error){
+                var proyecto = new ProyectoViewModel(response.Proyecto);
+                return Ok(proyecto);
+            }
+            ModelState.AddModelError("Buscar proyecto", response.Mensaje);
+            var problemDetails = new ValidationProblemDetails(ModelState)
+                    { Status = StatusCodes.Status400BadRequest };
+            return BadRequest(response.Mensaje);
+        }
+
         [HttpPut]
         public ActionResult<string> Put(ProyectoUpdateModel proyectoUpdate)
         {

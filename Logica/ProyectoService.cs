@@ -38,7 +38,7 @@ namespace Logica
                 var proyectoYaRegistrado = _context.Proyectos.Where(p => p.referenciaInvestigadorPrincipal == idBuscada1.userName ||
                 p.referenciaInvestigadorPrincipal == idBuscada2.userName || p.referenciaInvestigadorSecundario == idBuscada1.userName 
                 || p.referenciaInvestigadorSecundario == idBuscada2.userName).FirstOrDefault();
-                
+
                 if (proyectoYaRegistrado != null){
                     return new GuardarProyectoResponse("Error: ya se tiene un proyecto registrado con las identificaciones: "
                      + idBuscada1.userName + ", " +idBuscada2.userName);
@@ -60,10 +60,17 @@ namespace Logica
             List<Proyecto> proyectos = _context.Proyectos.ToList();
             foreach (var item in proyectos)
             {
-                item.investigadorPrincipal = _context.Usuarios.Find(item.referenciaInvestigadorPrincipal);
-                item.investigadorSecundario = _context.Usuarios.Find(item.referenciaInvestigadorSecundario);
-                item.evaluadorProyecto1 = _context.Usuarios.Find(item.referenciaEvaluadorProyecto1);
-                item.evaluadorProyecto2 = _context.Usuarios.Find(item.referenciaEvaluadorProyecto2);
+                try{
+                    item.investigadorPrincipal = _context.Usuarios.Find(item.referenciaInvestigadorPrincipal);
+                    item.investigadorPrincipal.persona = _context.Personas.Find(item.referenciaInvestigadorPrincipal);
+                    item.investigadorSecundario = _context.Usuarios.Find(item.referenciaInvestigadorSecundario);
+                    item.investigadorSecundario.persona = _context.Personas.Find(item.referenciaInvestigadorSecundario);
+                    item.evaluadorProyecto1 = _context.Usuarios.Find(item.referenciaEvaluadorProyecto1);
+                    item.evaluadorProyecto1.persona = _context.Personas.Find(item.referenciaEvaluadorProyecto1);
+                    item.evaluadorProyecto2 = _context.Usuarios.Find(item.referenciaEvaluadorProyecto2);
+                    item.evaluadorProyecto2.persona = _context.Personas.Find(item.referenciaEvaluadorProyecto2);
+                } catch (Exception e){}
+
             }
             return proyectos;
         }
@@ -88,6 +95,29 @@ namespace Logica
                 return new GuardarProyectoResponse("Proyecto no encontrado");
             }
             return new GuardarProyectoResponse(proyecto);
+        }
+
+        public GuardarProyectoResponse ConsultarOneXCodigo(int reference){
+
+                var proyecto = _context.Proyectos.Find(reference);
+                if (proyecto == null){
+                    return new GuardarProyectoResponse("Error, el proyecto no existe");
+                } 
+                try{
+                    proyecto.investigadorPrincipal = _context.Usuarios.Find(proyecto.referenciaInvestigadorPrincipal);
+                    proyecto.investigadorPrincipal.persona = _context.Personas.Find(proyecto.referenciaInvestigadorPrincipal);
+                    proyecto.investigadorSecundario = _context.Usuarios.Find(proyecto.referenciaInvestigadorSecundario);
+                    proyecto.investigadorSecundario.persona = _context.Personas.Find(proyecto.referenciaInvestigadorSecundario);
+
+                    proyecto.evaluadorProyecto1 = _context.Usuarios.Find(proyecto.referenciaEvaluadorProyecto1);
+                    proyecto.evaluadorProyecto1.persona = _context.Personas.Find(proyecto.referenciaEvaluadorProyecto1);
+                    proyecto.evaluadorProyecto2 = _context.Usuarios.Find(proyecto.referenciaEvaluadorProyecto2);
+                    proyecto.evaluadorProyecto2.persona = _context.Personas.Find(proyecto.referenciaEvaluadorProyecto2);
+                } catch(Exception e){}
+
+                return new GuardarProyectoResponse(proyecto);
+
+
         }
 
          public GuardarProyectoResponse Actualizar(Proyecto proyectoNuevo)

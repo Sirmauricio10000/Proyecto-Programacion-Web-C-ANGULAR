@@ -32,6 +32,13 @@ export class ProyectoService {
       );
   }
 
+  getByCode(reference: number) : Observable<Proyecto> {
+    return this.http.get<Proyecto>(this.baseUrl + 'api/Proyecto/'+reference+"2")
+      .pipe(tap(),
+        catchError(this.handleErrorService.handleError<Proyecto>('Consulta Proyecto', null))
+      );
+  }
+
   post(proyecto: Proyecto): Observable<Proyecto> {
     return this.http.post<Proyecto>(this.baseUrl + 'api/Proyecto', proyecto)
       .pipe(tap(),

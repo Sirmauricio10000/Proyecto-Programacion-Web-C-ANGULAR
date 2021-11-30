@@ -34,18 +34,24 @@
   <table class="table table-success table-striped">
     <thead>
       <tr>
-        <td>Codigo Proyecto a evaluar</td>
-        <td>Titulo del proyecto a evaluar</td>
+        <td>Codigo Proyecto</td>
+        <td>Titulo del proyecto</td>
         <td>ID Evaluador 1</td>
         <td>ID Evaluador 2</td>
+        <td>Estado</td>
+        <td>Grupo de Investigacion</td>
+        <td>Fecha Presentacion</td> 
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let proyecto of proyectos|ProyectoPipe:filtro;index as i">
           <td>{{proyecto.codigoProyecto}} </td>
           <td>{{proyecto.tituloProyecto}} </td>
-          <td>{{proyecto.evaluadorProyecto1.identificacionUsuario}} </td>
-          <td>{{proyecto.evaluadorProyecto2.identificacionUsuario}} </td>
+          <td>{{proyecto.evaluadorProyecto1.userName}} </td>
+          <td>{{proyecto.evaluadorProyecto2.userName}} </td>
+          <td>{{proyecto.evaluadorProyecto2.estadoProyecto}} </td>
+          <td>{{proyecto.evaluadorProyecto2.grupoDeInvestigacion}} </td>
+          <td>{{proyecto.evaluadorProyecto2.fechaPresentacion}} </td>
       </tr>
   </tbody>
   </table>

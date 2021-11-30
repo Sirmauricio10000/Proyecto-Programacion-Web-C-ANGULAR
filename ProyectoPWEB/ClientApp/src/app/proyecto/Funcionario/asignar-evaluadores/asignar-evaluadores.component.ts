@@ -18,32 +18,22 @@ export class AsignarEvaluadoresComponent implements OnInit {
   idEvaluador2: string;
   proyectos: Proyecto[];
   proyecto: Proyecto;
-  usuario : Usuario;
-  usuarios: Usuario[];
   filtro: string;
   filtro2: string;
 
   ngOnInit() {
     this.proyectoService.get().subscribe(result => {this.proyectos = result;});
-    this.usuarioService.get().subscribe(result=>{this.usuarios = result})
   }
 
   registrarEvaluador(){
-    this.proyectoService.get().subscribe(result => {this.proyectos = result;});
-
-    this.proyectos.forEach(key => {
-      if(key.codigoProyecto==this.codigoProyectoEvaluar)
-      {
-        key.referenciaEvaluadorProyecto1 = this.idEvaluador1;
-        key.referenciaEvaluadorProyecto2 = this.idEvaluador2;
-        key.referenciaInvestigadorPrincipal = key.investigadorPrincipal.userName;
-        key.referenciaInvestigadorSecundario = key.investigadorSecundario.userName;
-        this.proyecto = new Proyecto;
-        this.proyecto = key;
-      }
+    this.proyectoService.getByCode(this.codigoProyectoEvaluar).subscribe(result => {
+      result.referenciaEvaluadorProyecto1 = this.idEvaluador1;
+      result.referenciaEvaluadorProyecto2 = this.idEvaluador2;
+      result.referenciaInvestigadorPrincipal = result.investigadorPrincipal.userName;
+      result.referenciaInvestigadorSecundario = result.investigadorSecundario.userName;
+      this.proyecto = new Proyecto;
+      this.proyecto = result;
     });
-
-    alert(JSON.stringify(this.proyecto));
 
     this.proyectoService.put(this.proyecto).subscribe(p => {
       if (p != null) {
