@@ -28,6 +28,7 @@
           <td>Estado</td>
           <td>Grupo de Investigacion</td>
           <td>Fecha Presentacion</td>
+          <td>Link Proyecto </td>
         </tr>
       </thead>
       <tbody>
@@ -39,6 +40,7 @@
           <td>{{proyecto.estadoProyecto}} </td>
           <td>{{proyecto.grupoDeInvestigacion}} </td>
           <td>{{proyecto.fechaPresentacion | date:'d/M/yyyy h:mm a'}} </td>
+          <td>{{proyecto.linkProyecto}} </td>
         </tr>
       </tbody>
     </table>
@@ -46,7 +48,7 @@
     <br> <br> <br>
 
     <div class="d-grid gap-2 col-3 mx-auto">
-      <input type="text" placeholder="Id del proyecto a calificar">
+      <input type="text" placeholder="Id del proyecto a calificar" [(ngModel)]="codigo" name="codigo">
     </div>
 
     <br> <br>
@@ -54,7 +56,7 @@
 
     <div class="form-floating">
       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-        style="height: 100px"></textarea>
+        style="height: 100px" [(ngModel)]="comentarios" name="comentarios"></textarea>
       <label for="floatingTextarea2">Comentarios del proyecto</label>
     </div>
     <br> <br>
@@ -62,8 +64,8 @@
 
     <div class="col text-center">
       <div style="margin-left:30% ;" class="col-md-5">
-        <label for="validationCustom04" class="form-label">Estado de la revicion</label>
-        <select name="tipoId" id="inputState" class="form-select">
+        <label for="validationCustom04" class="form-label" name="calificacion">Estado de la revisión</label>
+        <select name="tipoId" id="inputState" class="form-select" [(ngModel)]="calificacion">
           <option option selected disabled value="Selecione">Seleccion...</option>
           <option value="Aprobado">Aprobado</option>
           <option value="Rechazado">Rechazado</option>
@@ -74,7 +76,7 @@
       <br> <br>
 
       <div class="col-12">
-        <button class="btn btn-primary" type="button">Registrar calificacion</button>
+        <button class="btn btn-primary" type="button" (click)="calificar()">Registrar calificacion</button>
       </div>
 
     </div>
