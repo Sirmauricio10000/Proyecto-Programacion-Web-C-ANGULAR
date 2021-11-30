@@ -26,9 +26,16 @@ export class UsuarioService {
   }
 
   getOne(userName: string) : Observable<Usuario> {
-    return this.http.get<Usuario>(this.baseUrl + 'api/Usuario'+userName)
+    return this.http.get<Usuario>(this.baseUrl + 'api/Usuario/'+userName)
       .pipe(tap(),
         catchError(this.handleErrorService.handleError<Usuario>('Consulta Usuario', null))
+      );
+  }
+
+  getAdmins() : Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.baseUrl + 'api/Usuario/2')
+      .pipe(tap(),
+        catchError(this.handleErrorService.handleError<Usuario[]>('Consulta Usuarios', null))
       );
   }
 

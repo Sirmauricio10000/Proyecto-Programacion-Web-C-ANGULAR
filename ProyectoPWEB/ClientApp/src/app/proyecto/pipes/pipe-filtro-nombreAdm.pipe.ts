@@ -6,14 +6,12 @@ import { Usuario } from '../models/usuario';
   name: 'pipe-filtro-nombreAdm'
 })
 export class PipeFiltroNombreAdmPipe implements PipeTransform {
- usuarioFiltrar : string = "administrador";
-  transform(usuarios: Usuario[], filtro: string): any {
-    if (filtro == null || filtro=="") return usuarios;
+
+  transform(usuarios: Usuario[], filtro2: string): any {
+    if (filtro2 == null || filtro2=="") return usuarios;
 
     //var proyectosFiltrados= proyectos.filter(x=>x.codigoProyecto===parseInt(filtro));    aqui es por codigo
-    var usuariosFiltrados = usuarios.filter(x=>x.userName.toLowerCase().indexOf(filtro.toLowerCase())!==-1); //aqui por titulo
-    var listaUsuarios = usuariosFiltrados.filter(x=>x.userType.toLowerCase().indexOf(this.usuarioFiltrar.toLowerCase())!==-1);
-    return listaUsuarios
+    var usuariosFiltrados = usuarios.filter(x=>x.userName.toLowerCase().indexOf(filtro2.toLowerCase())!==-1); //aqui por titulo
+    return usuariosFiltrados;
     }
-
 }

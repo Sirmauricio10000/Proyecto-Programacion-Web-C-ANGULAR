@@ -61,6 +61,7 @@ namespace ProyectoPWEB.Controllers
             var usuario =
                 new Usuario {
                     userName = usuarioUpdate.userName,
+                    userType = usuarioUpdate.userType,
                     persona = usuarioUpdate.persona,
                 };
             return usuario;
@@ -70,6 +71,12 @@ namespace ProyectoPWEB.Controllers
         public IEnumerable<UsuarioViewModel> Gets()
         {
             var usuarios = usuarioService.ConsultarTodos().Select(p => new UsuarioViewModel(p));
+            return usuarios;
+        }
+        [HttpGet("2")]
+        public IEnumerable<UsuarioViewModel> GetAdmins()
+        {
+            var usuarios = usuarioService.ConsultarAdmins().Select(p => new UsuarioViewModel(p));
             return usuarios;
         }
 

@@ -15,26 +15,17 @@ export class ConcederPermisosComponent implements OnInit {
 
   tipoDeUsuario: string;
   identificacionUsuario: string;
-  usuarios: Usuario[];
   usuario: Usuario;
   
   ngOnInit() {
+    this.usuario = new Usuario;
   }
 
   modificarPermisos(){
-    this.usuarioService.get().subscribe(result => {
-      this.usuarios = result;
-    })
-      this.usuarios.forEach(key => {
-        if(key.userName==this.identificacionUsuario)
-        {
-          key.userType = this.tipoDeUsuario;
-          this.usuario = new Usuario;
-          this.usuario = key;
-        }
-      });
+    this.usuarioService.getOne(this.identificacionUsuario).subscribe(result =>{
+      this.usuario = result
+      this.usuario.userType = this.tipoDeUsuario;
 
-      alert(JSON.stringify(this.usuario));
       this.usuarioService.put(this.usuario).subscribe(result => {
         if (result != null) {
           const messageBox = this.modalService.open(AlertModalComponent)
@@ -43,6 +34,7 @@ export class ConcederPermisosComponent implements OnInit {
           this.usuario = result;
         }
       });
+    });
   }
 
 }

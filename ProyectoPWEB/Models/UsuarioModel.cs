@@ -8,13 +8,9 @@ using Entidad;
 namespace ProyectoPWEB.Models
 {
     public class UsuarioInputModel{
-        [Required, MinLength(4), MaxLength(30)]
         public string userName {get;set;}
-        [Required, MinLength(4), MaxLength(30)]
         public string userType{get; set;}
-        [Required, MinLength(4), MaxLength(30)]
         public string password{get; set;}
-        [Required, MinLength(4), MaxLength(30)]
         public string validatePass{get; set;}
         public Persona persona {get;set;}
     }

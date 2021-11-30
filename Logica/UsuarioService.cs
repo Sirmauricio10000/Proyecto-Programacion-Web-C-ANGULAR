@@ -46,16 +46,25 @@ namespace Logica
             return usuarios;
         }
 
+        public List<Usuario> ConsultarAdmins()
+        {
+            List<Usuario> usuarios = _context.Usuarios.Where(p => p.userType=="administrador").ToList();
+            foreach(var item in usuarios){
+                item.persona = _context.Personas.Find(item.userName);
+            }
+            return usuarios;
+        }
+
         public GuardarUsuarioResponse Actualizar(Usuario usuarioNuevo)
         {
             try
             {
-                var usuarioViejo = _context.Personas.Find(usuarioNuevo.userName);
+                var usuarioViejo = _context.Usuarios.Find(usuarioNuevo.userName);
                 if (usuarioViejo!=null){
-                    usuarioViejo = usuarioNuevo.persona;
-                    _context.Personas.Update(usuarioViejo);
+                    usuarioViejo.userType = usuarioNuevo.userType;
+                    usuarioViejo.persona = _context.Personas.Find(usuarioViejo.userName);
+                    _context.Usuarios.Update(usuarioViejo);
                     _context.SaveChanges();
-                    usuarioNuevo.persona = usuarioViejo;
                     return new GuardarUsuarioResponse(usuarioNuevo);
                 }
                 return new GuardarUsuarioResponse("Error el usuario no existe");

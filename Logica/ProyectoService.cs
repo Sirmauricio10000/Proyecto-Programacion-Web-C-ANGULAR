@@ -139,11 +139,13 @@ namespace Logica
                     proyectoViejo.comentariosProyecto = proyectoNuevo.comentariosProyecto;
                     proyectoViejo.referenciaEvaluadorProyecto1 = proyectoNuevo.referenciaEvaluadorProyecto1;
                     proyectoViejo.referenciaEvaluadorProyecto2 = proyectoNuevo.referenciaEvaluadorProyecto2;
-
-                    proyectoViejo.investigadorPrincipal = _context.Usuarios.Find(proyectoViejo.referenciaInvestigadorPrincipal);
-                    proyectoViejo.investigadorSecundario = _context.Usuarios.Find(proyectoViejo.referenciaInvestigadorSecundario);
-                    proyectoViejo.evaluadorProyecto1 = _context.Usuarios.Find(proyectoViejo.referenciaEvaluadorProyecto1);
-                    proyectoViejo.evaluadorProyecto2 = _context.Usuarios.Find(proyectoViejo.referenciaEvaluadorProyecto2);
+                    try{
+                        proyectoViejo.investigadorPrincipal = _context.Usuarios.Find(proyectoViejo.referenciaInvestigadorPrincipal);
+                        proyectoViejo.investigadorSecundario = _context.Usuarios.Find(proyectoViejo.referenciaInvestigadorSecundario);
+                        proyectoViejo.evaluadorProyecto1 = _context.Usuarios.Find(proyectoViejo.referenciaEvaluadorProyecto1);
+                        proyectoViejo.evaluadorProyecto2 = _context.Usuarios.Find(proyectoViejo.referenciaEvaluadorProyecto2);
+                    } catch(Exception e){}
+                    
                     _context.Proyectos.Update(proyectoViejo);
                     _context.SaveChanges();
                     return new GuardarProyectoResponse(proyectoViejo);

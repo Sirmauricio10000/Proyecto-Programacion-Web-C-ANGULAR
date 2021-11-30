@@ -24,6 +24,7 @@ import { HomeFuncionarioComponent } from './proyecto/Funcionario/home-funcionari
 import { NavFuncionarioComponent } from './proyecto/Funcionario/nav-funcionario/nav-funcionario.component';
 import { ProyectoService } from './services/proyecto.service';
 import { ConsultaProyectoPipe } from './proyecto/pipes/consulta-proyecto.pipe';
+import { PipeFiltroNombreAdmPipe } from './proyecto/pipes/pipe-filtro-nombreAdm.pipe';
 import { AsignarEvaluadoresComponent } from './proyecto/Funcionario/asignar-evaluadores/asignar-evaluadores.component';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -57,6 +58,7 @@ import { CalificarProyectosComponent } from './proyecto/Funcionario/calificar-pr
     HomeFuncionarioComponent,
     NavFuncionarioComponent,
     ConsultaProyectoPipe,
+    PipeFiltroNombreAdmPipe,
     AsignarEvaluadoresComponent,
     AlertModalComponent,
     ConcederPermisosComponent,
