@@ -9,13 +9,13 @@ namespace ProyectoPWEB.Models
 {
     public class ProyectoInputModel
     {
-        [Required(ErrorMessage = "El titulo del proyecto es requerido"), MaxLength(30)]
+        [Required(ErrorMessage = "El titulo del proyecto es requerido"), MinLength(4), MaxLength(30)]
         public string tituloProyecto {get; set;}
-        [Required(ErrorMessage = "La identificacion del investigador principal es requerida")]
+        [Required(ErrorMessage = "La identificacion del investigador principal es requerida"), MinLength(4), MaxLength(30)]
         public string referenciaInvestigadorPrincipal {get;set;}
-        [Required(ErrorMessage = "La identificacion del investigador secundario es requerida")]
+        [Required(ErrorMessage = "La identificacion del investigador secundario es requerida"), MinLength(4), MaxLength(30)]
         public string referenciaInvestigadorSecundario {get;set;}
-        [Required(ErrorMessage = "El grupo de investigacion es requerido")]
+        [Required(ErrorMessage = "El grupo de investigacion es requerido"), MinLength(4), MaxLength(30)]
         public string grupoDeInvestigacion {get; set;}
         [Required(ErrorMessage = "El area del proyecto es requerida")]
         public string areaProyecto {get; set;}
