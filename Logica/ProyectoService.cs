@@ -69,7 +69,7 @@ namespace Logica
                     item.evaluadorProyecto1.persona = _context.Personas.Find(item.referenciaEvaluadorProyecto1);
                     item.evaluadorProyecto2 = _context.Usuarios.Find(item.referenciaEvaluadorProyecto2);
                     item.evaluadorProyecto2.persona = _context.Personas.Find(item.referenciaEvaluadorProyecto2);
-                } catch (Exception e){}
+                } catch (Exception){}
 
             }
             return proyectos;
@@ -113,7 +113,7 @@ namespace Logica
                     proyecto.evaluadorProyecto1.persona = _context.Personas.Find(proyecto.referenciaEvaluadorProyecto1);
                     proyecto.evaluadorProyecto2 = _context.Usuarios.Find(proyecto.referenciaEvaluadorProyecto2);
                     proyecto.evaluadorProyecto2.persona = _context.Personas.Find(proyecto.referenciaEvaluadorProyecto2);
-                } catch(Exception e){}
+                } catch(Exception){}
 
                 return new GuardarProyectoResponse(proyecto);
 
@@ -144,7 +144,7 @@ namespace Logica
                         proyectoViejo.investigadorSecundario = _context.Usuarios.Find(proyectoViejo.referenciaInvestigadorSecundario);
                         proyectoViejo.evaluadorProyecto1 = _context.Usuarios.Find(proyectoViejo.referenciaEvaluadorProyecto1);
                         proyectoViejo.evaluadorProyecto2 = _context.Usuarios.Find(proyectoViejo.referenciaEvaluadorProyecto2);
-                    } catch(Exception e){}
+                    } catch(Exception){}
                     
                     _context.Proyectos.Update(proyectoViejo);
                     _context.SaveChanges();
